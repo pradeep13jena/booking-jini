@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
+import { SectionDivider } from "@/components/layout/SectionDivider";
 import { Orangelogo } from "@/assets/image";
 import { cn } from "@/lib/utils";
 
@@ -62,8 +63,9 @@ const navItemClass =
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-8">
+    <header className="sticky top-0 z-50 w-full bg-background">
+      {/* Own rails — the header's solid bg covers the global overlay in layout.tsx */}
+      <div className="container flex items-center justify-between py-6 px-7.5 border-x border-dashed border-frame">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -125,6 +127,7 @@ export function Navbar() {
         {/* CTA */}
         <AnimatedButton text="Get Started" href="/contact" />
       </div>
+      <SectionDivider />
     </header>
   );
 }

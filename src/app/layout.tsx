@@ -27,7 +27,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${urbanist.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="relative min-h-full flex flex-col overflow-x-clip">
+        {/* Dashed vertical rails along the container edges, full page height */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-10 container border-x border-dashed border-frame"
+        />
         <Navbar />
         {children}
         <Footer />

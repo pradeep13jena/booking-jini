@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 
 import { Orangelogo } from "@/assets/image";
+import { SectionDivider } from "@/components/layout/SectionDivider";
 
 const footerSections = [
   {
@@ -116,14 +117,15 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="w-full border-t bg-background">
-      <div className="container mx-auto px-4 py-12 md:px-8 lg:py-14">
+    <footer className="w-full">
+      <SectionDivider />
+      <div className="container mx-auto px-8 py-12 lg:py-14">
 
         {/* Main Footer */}
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[1.8fr_repeat(4,1fr)] lg:gap-16">
 
           {/* Brand */}
-          <div className="max-w-sm">
+          <div className="max-w-sm py-4">
             <Link
               href="/"
               className="inline-flex items-center"
@@ -135,13 +137,13 @@ export function Footer() {
               />
             </Link>
 
-            <p className="mt-7 max-w-sm text-base leading-7 text-muted-foreground opacity-60 font-bold font-heading">
+            <p className="mt-4 max-w-sm text-base leading-7 text-muted-foreground opacity-60 font-bold font-heading">
               The leading direct booking platform engineered to reduce hotel
               dependence on high commission OTAs.
             </p>
 
             {/* Social Links */}
-            <div className="mt-8 flex items-center gap-3">
+            <div className="mt-4 flex items-center gap-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
 
@@ -183,7 +185,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 rounded-xl bg-muted/30 px-6 py-6 text-sm font-bold text-muted-foreground opacity-60 md:px-7">
+        <div className="mt-16 bg-white rounded-xl text-base px-6 py-6 font-bold text-muted-foreground opacity-60 md:px-7">
           © 2026 Bookingjini. All rights reserved. Registered trademark of
           Bookingjini technologies.
         </div>
