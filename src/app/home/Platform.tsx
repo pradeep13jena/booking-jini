@@ -72,7 +72,8 @@ const PRODUCTS: {
   },
 ];
 
-export function Platform() {
+// `cta` adds a centered white pill under the grid (used on inner pages)
+export function Platform({ cta }: { cta?: { text: string; href: string } }) {
   return (
     <section className="w-full">
       <div className="container px-6 py-16 md:py-20">
@@ -106,6 +107,18 @@ export function Platform() {
             </Reveal>
           ))}
         </div>
+
+        {cta && (
+          <Reveal className="mt-10 flex justify-center">
+            <Link
+              href={cta.href}
+              className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-[#1E0D01] shadow-[0_4px_14px_rgba(30,13,1,0.06)] transition-colors duration-300 hover:text-primary"
+            >
+              {cta.text}
+              <LuChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+            </Link>
+          </Reveal>
+        )}
       </div>
     </section>
   );

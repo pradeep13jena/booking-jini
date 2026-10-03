@@ -13,7 +13,8 @@ const parse = (value: string) => {
     suffix,
     target: Number(digits.replace(/,/g, "")),
     decimals: digits.split(".")[1]?.length ?? 0,
-    grouped: digits.includes(","),
+    // Keep the grouping style as written: "1,80,841" (Indian) vs "180,841" (international)
+    locale: digits.includes(",") ? (/,\d{2},/.test(digits) ? "en-IN" : "en-US") : null,
   };
 };
 
@@ -30,11 +31,11 @@ export function CountUp({ value, duration = 1.8 }: { value: string; duration?: n
     const parsed = parse(value);
     if (!el || !parsed || !inView || reduceMotion) return;
 
-    const { prefix, suffix, target, decimals, grouped } = parsed;
+    const { prefix, suffix, target, decimals, locale } = parsed;
     const format = (n: number) =>
       prefix +
-      (grouped
-        ? n.toLocaleString("en-IN", { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
+      (locale
+        ? n.toLocaleString(locale, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
         : n.toFixed(decimals)) +
       suffix;
 

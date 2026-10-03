@@ -12,7 +12,7 @@ export function SectionHeading({
   description,
   align = "center",
 }: {
-  badge: string;
+  badge?: string;
   icon?: ReactNode;
   title: ReactNode;
   description?: string;
@@ -27,11 +27,13 @@ export function SectionHeading({
         centered ? "items-center text-center" : "items-start text-left"
       )}
     >
-      <span className="inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs font-medium text-[#1E0D01]">
-        {icon}
-        {badge}
-      </span>
-      <h2 className="mt-4 max-w-3xl font-heading text-3xl font-medium tracking-tight text-[#1E0D01] md:text-5xl">
+      {badge && (
+        <span className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs font-medium text-[#1E0D01]">
+          {icon}
+          {badge}
+        </span>
+      )}
+      <h2 className="max-w-3xl font-heading text-3xl font-medium tracking-tight text-[#1E0D01] md:text-5xl">
         {title}
       </h2>
       {description && (

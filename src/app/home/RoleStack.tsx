@@ -1,11 +1,9 @@
-"use client";
-
-import { useRef, type ReactNode } from "react";
-import { motion, useReducedMotion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import type { ReactNode } from "react";
 import type { IconType } from "react-icons";
 import { LuBriefcase, LuChartLine, LuCircleCheck, LuConciergeBell, LuZap } from "react-icons/lu";
 
 import { SectionHeading } from "./SectionHeading";
+import { StickyStack } from "./StickyStack";
 import { FrontDeskMockup, ManagerMockup, OwnerMockup } from "./RoleMockups";
 
 const ROLES: { icon: IconType; role: string; title: string; points: string[]; mockup: ReactNode }[] = [
@@ -44,67 +42,40 @@ const ROLES: { icon: IconType; role: string; title: string; points: string[]; mo
   },
 ];
 
-// Clears the sticky navbar; each later card sits a little lower so earlier edges peek out
-const STICKY_TOP = 112;
-const STACK_OFFSET = 16;
-const SCALE_STEP = 0.04;
-
-function RoleCard({
-  role,
-  index,
-  total,
-  progress,
-}: {
-  role: (typeof ROLES)[number];
-  index: number;
-  total: number;
-  progress: MotionValue<number>;
-}) {
-  const reduceMotion = useReducedMotion();
-  // Shrinks once the next card starts covering it; earlier cards end up smallest
-  const scale = useTransform(progress, [index / total, 1], [1, 1 - (total - 1 - index) * SCALE_STEP]);
+function RoleCard({ role }: { role: (typeof ROLES)[number] }) {
   const { icon: Icon } = role;
 
   return (
-    <li className="sticky" style={{ top: STICKY_TOP + index * STACK_OFFSET }}>
-      <motion.article
-        style={reduceMotion ? undefined : { scale }}
-        className="grid origin-top grid-cols-1 overflow-hidden rounded-2xl border border-black/5 bg-white p-2 shadow-[0_-8px_30px_rgba(30,13,1,0.05)] md:grid-cols-2"
-      >
-        <div className="flex flex-col justify-center p-5 md:p-10">
-          <span className="flex items-center gap-1.5 text-[11px] font-medium tracking-widest text-primary uppercase">
-            <Icon className="h-3.5 w-3.5" />
-            {role.role}
-          </span>
-          <h3 className="mt-3 max-w-sm font-heading text-2xl font-medium tracking-tight text-[#1E0D01] md:text-3xl">
-            {role.title}
-          </h3>
-          <ul className="mt-5 flex flex-col gap-2.5">
-            {role.points.map((point) => (
-              <li key={point} className="flex items-start gap-2 text-sm text-[#1E0D01]/70">
-                <LuCircleCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                {point}
-              </li>
-            ))}
-          </ul>
-        </div>
+    <article className="grid grid-cols-1 overflow-hidden rounded-2xl border border-black/5 bg-white p-2 shadow-[0_-8px_30px_rgba(30,13,1,0.05)] md:grid-cols-2">
+      <div className="flex flex-col justify-center p-5 md:p-10">
+        <span className="flex items-center gap-1.5 text-[11px] font-medium tracking-widest text-primary uppercase">
+          <Icon className="h-3.5 w-3.5" />
+          {role.role}
+        </span>
+        <h3 className="mt-3 max-w-sm font-heading text-2xl font-medium tracking-tight text-[#1E0D01] md:text-3xl">
+          {role.title}
+        </h3>
+        <ul className="mt-5 flex flex-col gap-2.5">
+          {role.points.map((point) => (
+            <li key={point} className="flex items-start gap-2 text-sm text-[#1E0D01]/70">
+              <LuCircleCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              {point}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        <div
-          aria-hidden
-          className="relative h-64 overflow-hidden rounded-xl bg-linear-to-br from-[#FAFAFA] via-[#FDF3EC] to-[#FBE3D3] md:h-80"
-        >
-          {role.mockup}
-        </div>
-      </motion.article>
-    </li>
+      <div
+        aria-hidden
+        className="relative h-64 overflow-hidden rounded-xl bg-linear-to-br from-[#FAFAFA] via-[#FDF3EC] to-[#FBE3D3] md:h-80"
+      >
+        {role.mockup}
+      </div>
+    </article>
   );
 }
 
 export function RoleStack() {
-  const ref = useRef<HTMLUListElement>(null);
-  // 0 when the list's top reaches the sticky line, 1 when its bottom leaves the viewport bottom
-  const { scrollYProgress } = useScroll({ target: ref, offset: [`start ${STICKY_TOP}px`, "end end"] });
-
   return (
     <section className="w-full">
       <div className="container px-6 py-16 md:py-20">
@@ -114,12 +85,11 @@ export function RoleStack() {
           title="One platform. A clear win for each role."
         />
 
-        {/* Gap between items is the scroll distance before the next card slides over */}
-        <ul ref={ref} className="mt-10 flex flex-col gap-[25vh] md:mt-14">
-          {ROLES.map((role, i) => (
-            <RoleCard key={role.role} role={role} index={i} total={ROLES.length} progress={scrollYProgress} />
+        <StickyStack className="mt-10 md:mt-14">
+          {ROLES.map((role) => (
+            <RoleCard key={role.role} role={role} />
           ))}
-        </ul>
+        </StickyStack>
       </div>
     </section>
   );
