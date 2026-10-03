@@ -1,7 +1,7 @@
 import type { IconType } from "react-icons";
 import { LuBuilding2, LuCrown, LuTrendingUp, LuUsers, LuZap } from "react-icons/lu";
 
-import { Reveal } from "../home/Reveal";
+import { Reveal } from "@/components/reusable/Reveal";
 
 const SEGMENTS: { icon: IconType; title: string; description: string }[] = [
   { icon: LuCrown, title: "Independent & boutique hotels", description: "Grow direct revenue and simplify operations." },

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
-import { Reveal } from "../home/Reveal";
+import { Reveal } from "@/components/reusable/Reveal";
 import { DUMMY } from "./dummy-images";
 
 export function AboutHero() {

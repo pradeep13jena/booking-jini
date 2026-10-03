@@ -1,4 +1,4 @@
-import { StickyStack } from "../home/StickyStack";
+import { StickyStack } from "@/components/reusable/StickyStack";
 import { SegmentCard, type Segment } from "./SegmentCard";
 
 // Segment cards that pin and stack while scrolling, same as the home RoleStack

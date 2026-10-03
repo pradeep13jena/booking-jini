@@ -3,8 +3,8 @@ import type { IconType } from "react-icons";
 import { FaInstagram, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { LuSmile } from "react-icons/lu";
 
-import { Reveal } from "../home/Reveal";
-import { SectionHeading } from "../home/SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 import { DUMMY } from "./dummy-images";
 
 type Socials = { x?: string; linkedin?: string; instagram?: string };

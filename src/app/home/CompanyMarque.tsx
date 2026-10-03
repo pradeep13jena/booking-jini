@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 
-import { airbnb, bookingcom, expedia, google, idsnext, meta, slack, square, stripe, wiki } from "@/assets/image";
+import { airbnb, bookingcom, expedia, google, idsnext, meta, slack, square, stripe, wiki } from "@/components/assets/image";
 
 const COMPANIES: { name: string; logo: StaticImageData }[] = [
   { name: "IDS Next", logo: idsnext },

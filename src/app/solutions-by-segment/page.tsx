@@ -1,12 +1,13 @@
+
 import type { Metadata } from 'next';
 
 import { SectionDivider } from '@/components/layout/SectionDivider';
-import { Platform } from '../home/Platform';
+import { Platform } from '@/components/reusable/Platform';
 import { SegmentHero } from './SegmentHero';
 import { SegmentStack } from './SegmentStack';
 import { HOTEL_SEGMENTS, OPERATOR_SEGMENTS } from './segments';
 import { HotelGroups } from './HotelGroups';
-import { PlatformStats } from './PlatformStats';
+import { StatsBand } from '@/components/reusable/StatsBand';
 import { GrowthPath } from './GrowthPath';
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export default function SolutionsBySegmentPage() {
       <SectionDivider />
       <Platform cta={{ text: 'Explore the platform', href: '/products' }} />
       <SectionDivider />
-      <PlatformStats />
+      <StatsBand />
       <SectionDivider />
       <GrowthPath />
     </main>

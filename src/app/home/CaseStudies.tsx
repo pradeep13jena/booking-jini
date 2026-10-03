@@ -6,8 +6,8 @@ import { FaQuoteRight, FaStar } from "react-icons/fa";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { Placeholder } from "./Placeholder";
-import { Reveal } from "./Reveal";
-import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 interface Testimonial {
   initials: string;

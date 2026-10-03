@@ -1,8 +1,8 @@
 import type { IconType } from "react-icons";
 import { LuBedDouble, LuCircleCheck, LuLink, LuWallet } from "react-icons/lu";
 
-import { Reveal } from "../home/Reveal";
-import { SectionHeading } from "../home/SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 type Line = { label: string; amount: number };
 

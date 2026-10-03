@@ -1,7 +1,7 @@
 import type { IconType } from "react-icons";
 import { FaBuilding, FaCircleNodes, FaHouseUser } from "react-icons/fa6";
 
-import { Reveal } from "../home/Reveal";
+import { Reveal } from "@/components/reusable/Reveal";
 
 const STAGES: { icon: IconType; title: string; description: string; tint: string }[] = [
   { icon: FaHouseUser, title: "Independent property", description: "Direct bookings + Simple operations", tint: "bg-[#FDEBDD]" },

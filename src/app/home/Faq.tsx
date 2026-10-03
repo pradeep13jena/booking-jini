@@ -7,8 +7,8 @@ import { LuChevronDown } from "react-icons/lu";
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { cn } from "@/lib/utils";
 import { Placeholder } from "./Placeholder";
-import { Reveal } from "./Reveal";
-import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 const FAQS: { question: string; answer: ReactNode }[] = [
   {

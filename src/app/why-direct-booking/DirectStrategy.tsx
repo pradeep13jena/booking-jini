@@ -3,7 +3,7 @@ import type { IconType } from "react-icons";
 import { LuMonitor, LuStar } from "react-icons/lu";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
-import { StickyStack } from "../home/StickyStack";
+import { StickyStack } from "@/components/reusable/StickyStack";
 import { ChannelBalanceMockup, GrowthCaseMockup, WebsiteDashboardMockup } from "./StrategyMockups";
 
 const CASE_STATS = [

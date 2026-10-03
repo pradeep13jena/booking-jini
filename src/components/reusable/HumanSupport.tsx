@@ -2,8 +2,13 @@ import Image from "next/image";
 import type { IconType } from "react-icons";
 import { LuCircleCheck, LuConciergeBell, LuHeadset, LuPlus, LuUsers } from "react-icons/lu";
 
-import { Reveal } from "../home/Reveal";
-import { DUMMY } from "./dummy-images";
+import { Reveal } from "./Reveal";
+
+// TEMP: placeholder support-team faces (host allowed in next.config.ts) — swap for real photos
+const AVATARS = [5, 11, 32, 15, 33, 8, 26, 14, 44].map((id) => `https://i.pravatar.cc/80?img=${id}`);
+
+const DEFAULT_DESCRIPTION =
+  "When your revenue system needs attention, you should be able to talk to someone. Bookingjini gives hotel teams access to real people who understand hospitality operations.";
 
 const POINTS = [
   "24/7 technical call and email support",
@@ -17,7 +22,8 @@ const CHANNELS: { icon: IconType; title: string; subtitle: string; iconClass: st
   { icon: LuConciergeBell, title: "Hotel Operations Experts", subtitle: "Support from people who understand your business", iconClass: "bg-emerald-50 text-emerald-600", plusClass: "bg-emerald-600" },
 ];
 
-export function HumanSupport() {
+// `description` lets each page tune the intro line; the rest of the block is fixed
+export function HumanSupport({ description = DEFAULT_DESCRIPTION }: { description?: string }) {
   return (
     <section className="w-full">
       <div className="container grid grid-cols-1 items-center gap-10 px-6 py-16 md:grid-cols-2 md:py-24">
@@ -29,10 +35,7 @@ export function HumanSupport() {
           <h2 className="mt-3 font-heading text-3xl font-medium tracking-tight text-[#1E0D01] md:text-4xl">
             Technology backed by real people
           </h2>
-          <p className="mt-4 max-w-md text-sm leading-relaxed text-[#1E0D01]/60">
-            When your revenue system needs attention, you should be able to talk to someone. Bookingjini gives hotel
-            teams access to real people who understand hospitality operations.
-          </p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-[#1E0D01]/60">{description}</p>
           <ul className="mt-8 flex flex-col gap-3">
             {POINTS.map((point) => (
               <li key={point} className="flex items-center gap-2 text-sm text-[#1E0D01]">
@@ -58,7 +61,7 @@ export function HumanSupport() {
                   <LuPlus className="h-3 w-3" />
                 </span>
                 <div className="hidden shrink-0 -space-x-2 sm:flex">
-                  {DUMMY.support.slice(i * 3, i * 3 + 3).map((src) => (
+                  {AVATARS.slice(i * 3, i * 3 + 3).map((src) => (
                     <Image key={src} src={src} alt="" width={28} height={28} className="size-7 rounded-full border-2 border-white object-cover" />
                   ))}
                 </div>

@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 import { Placeholder } from "./Placeholder";
-import { Reveal } from "./Reveal";
-import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 // Rising signal bars — "more revenue"
 function BarsIcon() {

@@ -5,8 +5,8 @@ import { FaQuestion } from "react-icons/fa";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { cn } from "@/lib/utils";
-import { Reveal } from "./Reveal";
-import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 const EXTRANETS = [
   { name: "Extranet A", rate: "₹4,200" },

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { SectionDivider } from '@/components/layout/SectionDivider';
-import { Platform } from '../home/Platform';
+import { Platform } from '@/components/reusable/Platform';
 import { AboutHero } from './AboutHero';
 import { OurStory } from './OurStory';
 import { MissionVision } from './MissionVision';
@@ -9,7 +9,7 @@ import { CoreTeam } from './CoreTeam';
 import { GrowthStats } from './GrowthStats';
 import { WhoWeServe } from './WhoWeServe';
 import { LeadershipExperience } from './LeadershipExperience';
-import { HumanSupport } from './HumanSupport';
+import { HumanSupport } from '@/components/reusable/HumanSupport';
 
 export const metadata: Metadata = {
   title: 'About Us | Booking Jini',

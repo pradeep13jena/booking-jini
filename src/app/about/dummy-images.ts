@@ -11,5 +11,4 @@ export const DUMMY = {
   heroWork: photo("bj-work", 800, 800),
   office: photo("bj-office", 1600, 900),
   team: [12, 13, 47, 59, 60, 68, 51, 52].map(face),
-  support: [5, 11, 32, 15, 33, 8, 26, 14, 44].map((id) => `https://i.pravatar.cc/80?img=${id}`),
 };

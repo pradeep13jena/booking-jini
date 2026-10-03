@@ -1,8 +1,7 @@
 import type { IconType } from "react-icons";
 import { LuBuilding2, LuExpand, LuHouse, LuMapPin, LuShoppingBag } from "react-icons/lu";
 
-import { ArrowPillLink, OutlinePillLink } from "@/components/PillLinks";
-import { Reveal } from "../home/Reveal";
+import { SplitHero } from "@/components/reusable/SplitHero";
 
 // Positions are % of the diagram box; connector paths below use the same coordinates
 type Node = { title: string; note: string; icon: IconType; tone: string; x: number; y: number };
@@ -73,31 +72,12 @@ function SegmentDiagram() {
 
 export function SegmentHero() {
   return (
-    <section className="w-full">
-      <div className="container grid grid-cols-1 items-center gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
-        {/* Text slides in from the right, one line after another */}
-        <div>
-          <Reveal from="right">
-            <h1 className="font-heading text-4xl leading-[1.15] font-medium tracking-tight text-[#1E0D01] md:text-5xl">
-              One platform. Built around how you operate.
-            </h1>
-          </Reveal>
-          <Reveal from="right" index={1}>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-[#1E0D01]/60 md:text-base">
-              Every hotel business works differently. Bookingjini gives independent hotels, growing properties, hotel
-              groups, homestays and tourism boards one connected platform to sell, manage and grow.
-            </p>
-          </Reveal>
-          <Reveal from="right" index={2} className="mt-8 flex flex-wrap items-center gap-3">
-            <ArrowPillLink href="/contact" text="Book a demo" />
-            <OutlinePillLink href="/products" text="Explore the platform" />
-          </Reveal>
-        </div>
-
-        <Reveal index={1}>
-          <SegmentDiagram />
-        </Reveal>
-      </div>
-    </section>
+    <SplitHero
+      title="One platform. Built around how you operate."
+      description="Every hotel business works differently. Bookingjini gives independent hotels, growing properties, hotel groups, homestays and tourism boards one connected platform to sell, manage and grow."
+      primaryCta={{ text: "Book a demo", href: "/contact" }}
+      secondaryCta={{ text: "Explore the platform", href: "/products" }}
+      visual={<SegmentDiagram />}
+    />
   );
 }

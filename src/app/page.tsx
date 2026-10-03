@@ -11,7 +11,7 @@ import { CaseStudies } from './home/CaseStudies';
 import { TrustGrid } from './home/TrustGrid';
 import { RoleStack } from './home/RoleStack';
 import { HowItWorks } from './home/HowItWorks';
-import { Platform } from './home/Platform';
+import { Platform } from '@/components/reusable/Platform';
 import { Faq } from './home/Faq';
 
 export const metadata: Metadata = {

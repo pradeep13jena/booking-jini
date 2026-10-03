@@ -1,8 +1,8 @@
 import { LuChevronRight } from "react-icons/lu";
 
-import { CountUp } from "../home/CountUp";
-import { Reveal } from "../home/Reveal";
-import { SectionHeading } from "../home/SectionHeading";
+import { CountUp } from "@/components/reusable/CountUp";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 const STATS = [
   { value: "4300+", label: "Hotels on the platform" },

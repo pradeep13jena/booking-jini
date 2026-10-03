@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { SectionDivider } from "@/components/layout/SectionDivider";
-import { Orangelogo } from "@/assets/image";
+import { Orangelogo } from "@/components/assets/image";
 import { cn } from "@/lib/utils";
 
 import {

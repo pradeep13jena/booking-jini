@@ -1,8 +1,8 @@
 import type { IconType } from "react-icons";
 import { FaBolt, FaBuilding, FaHouseUser, FaProjectDiagram } from "react-icons/fa";
 
-import { Reveal } from "./Reveal";
-import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 // Card tint fades from warm peach to near-neutral across the three steps
 const STEPS: { icon: IconType; title: string; description: string; bg: string }[] = [

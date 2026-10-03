@@ -10,8 +10,7 @@ import {
   LuUserCheck,
 } from "react-icons/lu";
 
-import { ArrowPillLink, OutlinePillLink } from "@/components/PillLinks";
-import { Reveal } from "../home/Reveal";
+import { SplitHero } from "@/components/reusable/SplitHero";
 
 type Node = { icon: IconType; label?: string; caption?: string; ring: string };
 
@@ -107,31 +106,17 @@ function CommissionFlowMockup() {
 
 export function DirectHero() {
   return (
-    <section className="w-full">
-      <div className="container grid grid-cols-1 items-center gap-10 px-6 py-14 md:grid-cols-2 md:py-20">
-        {/* Text slides in from the right, one line after another */}
-        <div>
-          <Reveal from="right">
-            <h1 className="font-heading text-4xl leading-[1.15] font-medium tracking-tight text-[#1E0D01] md:text-5xl">
-              Your most valuable booking channel should be your own
-            </h1>
-          </Reveal>
-          <Reveal from="right" index={1}>
-            <p className="mt-5 max-w-md text-sm leading-relaxed text-[#1E0D01]/60 md:text-base">
-              OTAs help travellers find hotels, but high commissions of 15–25% can cut into profits. A direct channel
-              allows hotels to retain more revenue and strengthen guest relationships.
-            </p>
-          </Reveal>
-          <Reveal from="right" index={2} className="mt-8 flex flex-wrap items-center gap-3">
-            <ArrowPillLink href="/contact" text="Get started" />
-            <OutlinePillLink href="/contact" text="Contact us" />
-          </Reveal>
-        </div>
-
-        <Reveal index={1} className="rounded-2xl bg-linear-to-b from-white via-[#FFF6EE] to-[#FFDDBE] p-4 md:p-6">
+    <SplitHero
+      titleFrom="left"
+      title="Your most valuable booking channel should be your own"
+      description="OTAs help travellers find hotels, but high commissions of 15–25% can cut into profits. A direct channel allows hotels to retain more revenue and strengthen guest relationships."
+      primaryCta={{ text: "Get started", href: "/contact" }}
+      secondaryCta={{ text: "Contact us", href: "/contact" }}
+      visual={
+        <div className="rounded-2xl bg-linear-to-b from-white via-[#FFF6EE] to-[#FFDDBE] p-4 md:p-6">
           <CommissionFlowMockup />
-        </Reveal>
-      </div>
-    </section>
+        </div>
+      }
+    />
   );
 }

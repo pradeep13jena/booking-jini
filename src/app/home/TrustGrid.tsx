@@ -8,8 +8,8 @@ import {
   FaUserShield,
 } from "react-icons/fa";
 
-import { Reveal } from "./Reveal";
-import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 
 // Bracketed copy still needs confirmed facts before launch
 const TRUST_POINTS: { icon: IconType; title: string; description: string }[] = [

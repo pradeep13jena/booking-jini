@@ -1,4 +1,4 @@
-import { Reveal } from "../home/Reveal";
+import { Reveal } from "@/components/reusable/Reveal";
 
 // TEMP: styled text stand-ins — replace with logo images (next/image) once the assets are added
 const COMPANIES = [

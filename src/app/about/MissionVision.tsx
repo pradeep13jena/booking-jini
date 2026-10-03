@@ -2,8 +2,8 @@ import Image from "next/image";
 import type { IconType } from "react-icons";
 import { LuCircleCheck, LuOctagonAlert, LuSmile } from "react-icons/lu";
 
-import { Reveal } from "../home/Reveal";
-import { SectionHeading } from "../home/SectionHeading";
+import { Reveal } from "@/components/reusable/Reveal";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
 import { DUMMY } from "./dummy-images";
 
 const PILLARS: { icon: IconType; title: string; description: string }[] = [

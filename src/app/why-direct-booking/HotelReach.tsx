@@ -1,5 +1,5 @@
-import { CountUp } from "../home/CountUp";
-import { Reveal } from "../home/Reveal";
+import { CountUp } from "@/components/reusable/CountUp";
+import { Reveal } from "@/components/reusable/Reveal";
 
 // TODO: confirm figures — the About page and home StatsStrip currently disagree on hotels/boards
 const REACH = [

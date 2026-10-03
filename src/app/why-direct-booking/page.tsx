@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { SectionDivider } from '@/components/layout/SectionDivider';
-import { Platform } from '../home/Platform';
+import { Platform } from '@/components/reusable/Platform';
 import { DirectHero } from './DirectHero';
 import { OtaCostCompare } from './OtaCostCompare';
 import { WhyDirectMatters } from './WhyDirectMatters';

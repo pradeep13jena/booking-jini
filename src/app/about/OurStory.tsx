@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { motion, useReducedMotion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { LuUsers } from "react-icons/lu";
 
-import { Reveal } from "../home/Reveal";
+import { Reveal } from "@/components/reusable/Reveal";
 
 const STORY =
   "Bookingjini is headquartered in Bhubaneswar, Odisha, with a team of 60+ people working to make hotel technology simpler and more accessible. Today, Bookingjini primarily serves the Indian hospitality market, with ambitions to expand into the US, UK and Oceania.";

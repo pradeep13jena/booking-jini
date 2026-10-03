@@ -2,8 +2,8 @@ import type { ReactNode } from "react";
 import type { IconType } from "react-icons";
 import { LuBriefcase, LuChartLine, LuCircleCheck, LuConciergeBell, LuZap } from "react-icons/lu";
 
-import { SectionHeading } from "./SectionHeading";
-import { StickyStack } from "./StickyStack";
+import { SectionHeading } from "@/components/reusable/SectionHeading";
+import { StickyStack } from "@/components/reusable/StickyStack";
 import { FrontDeskMockup, ManagerMockup, OwnerMockup } from "./RoleMockups";
 
 const ROLES: { icon: IconType; role: string; title: string; points: string[]; mockup: ReactNode }[] = [
