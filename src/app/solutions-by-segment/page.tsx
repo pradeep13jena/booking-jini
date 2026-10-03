@@ -8,7 +8,7 @@ import { SegmentStack } from './SegmentStack';
 import { HOTEL_SEGMENTS, OPERATOR_SEGMENTS } from './segments';
 import { HotelGroups } from './HotelGroups';
 import { StatsBand } from '@/components/reusable/StatsBand';
-import { GrowthPath } from './GrowthPath';
+import { GrowthPath } from '@/components/reusable/GrowthPath';
 
 export const metadata: Metadata = {
   title: 'Solutions by Segment | Booking Jini',

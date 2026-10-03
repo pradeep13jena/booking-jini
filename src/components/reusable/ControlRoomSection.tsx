@@ -5,6 +5,7 @@ import { LuActivity, LuBuilding2, LuChevronRight, LuCloud, LuDatabase, LuLink, L
 
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
+import { WarmGradientSection } from "./WarmGradientSection";
 
 // Systems the hub fans out to; `y` is the row centre in % of the diagram
 const OUTPUTS: { icon: IconType; tone: string; dot: string; y: number }[] = [
@@ -82,14 +83,7 @@ export function ControlRoomSection({
   cta?: { text: string; href: string };
 }) {
   return (
-    <section className="relative w-full overflow-hidden">
-      {/* White top melting into orange → red → plum */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_45%_at_50%_0%,#F5F5F5_35%,transparent_75%),radial-gradient(ellipse_60%_60%_at_0%_40%,#FF6A00_0%,transparent_70%),radial-gradient(ellipse_70%_60%_at_100%_70%,#C8102E_0%,transparent_70%),linear-gradient(180deg,#F5F5F5_0%,#F35A1F_45%,#C81D25_75%,#7A2350_100%)]"
-      />
-
-      <div className="container relative px-6 py-16 md:py-24">
+    <WarmGradientSection>
         <SectionHeading badge={badge} icon={badgeIcon} title={title} description={description} />
 
         <Reveal className="mt-10 rounded-xl bg-white p-3 shadow-[0_20px_50px_rgba(80,10,10,0.2)] md:p-4">
@@ -130,7 +124,6 @@ export function ControlRoomSection({
             </Link>
           </Reveal>
         )}
-      </div>
-    </section>
+    </WarmGradientSection>
   );
 }
