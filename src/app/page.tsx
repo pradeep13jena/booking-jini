@@ -9,6 +9,7 @@ import { ProfitLeak } from './home/ProfitLeak';
 import { Outcomes } from './home/Outcomes';
 import { CaseStudies } from './home/CaseStudies';
 import { TrustGrid } from './home/TrustGrid';
+import { RoleStack } from './home/RoleStack';
 import { HowItWorks } from './home/HowItWorks';
 import { Platform } from './home/Platform';
 import { Faq } from './home/Faq';
@@ -35,6 +36,8 @@ export default function HomePage() {
       <CaseStudies />
       <SectionDivider />
       <TrustGrid />
+      <SectionDivider />
+      <RoleStack />
       <SectionDivider />
       <HowItWorks />
       <SectionDivider />

@@ -3,6 +3,7 @@ import type { IconType } from "react-icons";
 import {
   LuBot,
   LuBoxes,
+  LuChevronRight,
   LuCog,
   LuFlame,
   LuLayers,
@@ -87,7 +88,7 @@ export function Platform() {
             <Reveal key={title} index={i % 4}>
               <Link
                 href={href}
-                className="group flex h-full flex-col rounded-2xl border border-black/5 bg-white/50 p-5 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_8px_24px_rgba(30,13,1,0.06)]"
+                className="group flex h-full flex-col rounded-2xl border border-black/5 bg-white/50 p-5 transition-all duration-300 hover:border-primary hover:shadow-[0_8px_24px_rgba(249,117,24,0.08)] focus-visible:border-primary focus-visible:outline-none"
               >
                 <span className="flex size-10 items-center justify-center rounded-lg border border-black/5 bg-white text-[#1E0D01] transition-colors duration-300 group-hover:text-primary">
                   <Icon className="h-4.5 w-4.5" />
@@ -96,6 +97,11 @@ export function Platform() {
                 <p className="mt-2 text-sm leading-relaxed text-[#1E0D01]/60">
                   {description}
                 </p>
+                {/* Space is always reserved so the grid doesn't jump; only fades in on hover-capable devices */}
+                <span className="mt-auto flex items-center gap-1 pt-4 text-sm font-medium text-[#1E0D01] transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 [@media(hover:hover)]:translate-y-1 [@media(hover:hover)]:opacity-0">
+                  Learn Module
+                  <LuChevronRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                </span>
               </Link>
             </Reveal>
           ))}
