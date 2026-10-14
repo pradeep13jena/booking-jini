@@ -52,7 +52,7 @@ function RoleCard({ role }: { role: (typeof ROLES)[number] }) {
           <Icon className="h-3.5 w-3.5" />
           {role.role}
         </span>
-        <h3 className="mt-3 max-w-sm font-heading text-2xl font-medium tracking-tight text-[#1E0D01] md:text-3xl">
+        <h3 className="mt-3 max-w-sm font-sans text-2xl font-medium tracking-tight text-[#1E0D01] md:text-3xl">
           {role.title}
         </h3>
         <ul className="mt-5 flex flex-col gap-2.5">

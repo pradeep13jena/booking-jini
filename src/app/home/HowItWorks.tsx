@@ -35,6 +35,7 @@ export function HowItWorks() {
       <div className="container px-6 py-16 md:py-20">
         <SectionHeading
           badge="How it works"
+          font="sans"
           icon={<FaBolt className="h-3.5 w-3.5 text-primary" />}
           title="Live in [X] days. We do the heavy lifting."
         />
@@ -55,7 +56,7 @@ export function HowItWorks() {
                 <Icon className="h-7 w-7 text-primary" />
               </span>
 
-              <h3 className="mt-auto text-lg font-semibold text-[#1E0D01]">
+              <h3 className="mt-auto font-sans text-lg font-semibold text-[#1E0D01]">
                 {title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[#1E0D01]/60">

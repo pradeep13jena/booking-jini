@@ -75,6 +75,7 @@ export function Faq() {
           <SectionHeading
             align="left"
             badge="FAQs"
+            font="sans"
             title="Frequently Asked Questions"
             description="From setup to support, here are the answers you need to launch faster with confidence."
           />
@@ -101,7 +102,7 @@ export function Faq() {
                 index={i}
                 className="rounded-2xl border border-black/5 bg-white/60"
               >
-                <h3>
+                <h3 className="font-sans">
                   <button
                     id={buttonId}
                     type="button"

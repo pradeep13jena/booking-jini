@@ -79,6 +79,7 @@ export function Platform({ cta }: { cta?: { text: string; href: string } }) {
       <div className="container px-6 py-16 md:py-20">
         <SectionHeading
           badge="One connected platform"
+          font="sans"
           icon={<LuBoxes className="h-3.5 w-3.5 text-primary" />}
           title="Everything your hotel needs. Connected."
           description="One platform. Eight connected capabilities."
@@ -94,7 +95,7 @@ export function Platform({ cta }: { cta?: { text: string; href: string } }) {
                 <span className="flex size-10 items-center justify-center rounded-lg border border-black/5 bg-white text-[#1E0D01] transition-colors duration-300 group-hover:text-primary">
                   <Icon className="h-4.5 w-4.5" />
                 </span>
-                <h3 className="mt-6 font-semibold text-[#1E0D01]">{title}</h3>
+                <h3 className="mt-6 font-sans font-semibold text-[#1E0D01]">{title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-[#1E0D01]/60">
                   {description}
                 </p>

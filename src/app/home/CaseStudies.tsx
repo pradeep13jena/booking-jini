@@ -146,7 +146,7 @@ export function CaseStudies() {
               <p className="relative text-xs font-semibold tracking-[0.15em] text-primary uppercase">
                 Case study
               </p>
-              <h3 className="relative mt-3 max-w-sm font-heading text-3xl leading-tight font-bold md:text-4xl">
+              <h3 className="relative mt-3 max-w-sm font-sans text-3xl leading-tight font-bold md:text-4xl">
                 From ₹40 lakh to ₹2.4 crore in website bookings.
               </h3>
               <p className="relative mt-4 max-w-md text-sm leading-relaxed text-white/70">

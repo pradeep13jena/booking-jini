@@ -11,12 +11,15 @@ export function SectionHeading({
   title,
   description,
   align = "center",
+  font = "heading",
 }: {
   badge?: string;
   icon?: ReactNode;
   title: ReactNode;
   description?: string;
   align?: "center" | "left";
+  // "sans" sets the title in Inter (semibold) instead of Urbanist
+  font?: "heading" | "sans";
 }) {
   const centered = align === "center";
 
@@ -33,7 +36,12 @@ export function SectionHeading({
           {badge}
         </span>
       )}
-      <h2 className="max-w-3xl font-heading text-3xl font-medium tracking-tight text-[#1E0D01] md:text-5xl">
+      <h2
+        className={cn(
+          "max-w-3xl text-3xl tracking-tight text-[#1E0D01] md:text-5xl",
+          font === "sans" ? "font-sans font-semibold" : "font-heading font-medium"
+        )}
+      >
         {title}
       </h2>
       {description && (

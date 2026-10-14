@@ -56,6 +56,7 @@ export function TrustGrid() {
       <div className="container px-6 py-16 md:py-20">
         <SectionHeading
           badge="Why hotels trust us"
+          font="sans"
           title="Built to be relied on, every night of the year"
         />
 

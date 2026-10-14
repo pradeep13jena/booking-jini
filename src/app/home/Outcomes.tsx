@@ -149,7 +149,7 @@ export function Outcomes() {
                 <p className="relative mt-10 font-heading text-6xl font-bold tracking-tight md:text-7xl">
                   {o.value}
                 </p>
-                <h3 className="relative mt-4 text-xl font-semibold">{o.title}</h3>
+                <h3 className="relative mt-4 font-sans text-xl font-semibold">{o.title}</h3>
                 <p
                   className={cn(
                     "relative mt-2 mb-8 text-sm leading-relaxed",

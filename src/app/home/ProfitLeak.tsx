@@ -42,7 +42,7 @@ function StatCard({
         {value}
         {accent && <span className="text-primary">{accent}</span>}
       </p>
-      <h3 className="mt-3 text-lg font-semibold text-[#1E0D01]">{title}</h3>
+      <h3 className="mt-3 font-sans text-lg font-semibold text-[#1E0D01]">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-[#1E0D01]/60">
         {description}
       </p>
@@ -76,7 +76,7 @@ export function ProfitLeak() {
               <p className="relative mt-auto pt-16 font-heading text-7xl font-bold tracking-tight md:text-8xl">
                 15–25<span className="text-primary">%</span>
               </p>
-              <h3 className="relative mt-4 text-2xl font-semibold">
+              <h3 className="relative mt-4 font-sans text-2xl font-semibold">
                 Lost to commission
               </h3>
               <p className="relative mt-3 text-sm leading-relaxed text-white/70">
@@ -152,7 +152,7 @@ export function ProfitLeak() {
                 <FaQuestion className="h-5 w-5" />
               </span>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-[#1E0D01]">
+                <h3 className="font-sans text-lg font-semibold text-[#1E0D01]">
                   Real margin
                 </h3>
                 <p className="mt-1 text-sm leading-relaxed text-[#1E0D01]/60">
