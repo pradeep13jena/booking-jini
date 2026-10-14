@@ -12,6 +12,7 @@ export function SectionHeading({
   description,
   align = "center",
   font = "heading",
+  weight = font === "sans" ? "semibold" : "medium",
 }: {
   badge?: string;
   icon?: ReactNode;
@@ -20,6 +21,7 @@ export function SectionHeading({
   align?: "center" | "left";
   // "sans" sets the title in Inter (semibold) instead of Urbanist
   font?: "heading" | "sans";
+  weight?: "medium" | "semibold";
 }) {
   const centered = align === "center";
 
@@ -39,7 +41,8 @@ export function SectionHeading({
       <h2
         className={cn(
           "max-w-3xl text-3xl tracking-tight text-[#1E0D01] md:text-5xl",
-          font === "sans" ? "font-sans font-semibold" : "font-heading font-medium"
+          font === "sans" ? "font-sans" : "font-heading",
+          weight === "semibold" ? "font-semibold" : "font-medium"
         )}
       >
         {title}

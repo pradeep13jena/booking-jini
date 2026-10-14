@@ -13,6 +13,7 @@ export function Mission() {
       <div className="container relative px-6 py-16 md:py-20">
         <SectionHeading
           badge="Our mission"
+          weight="semibold"
           icon={<LuTarget className="h-3.5 w-3.5 text-primary" />}
           title="Help every hotel earn more revenue at lower cost, from one connected platform."
           description="More direct bookings. Less commission. Fewer hours lost to manual work. Everything we build is measured against those three outcomes for the hotelier."

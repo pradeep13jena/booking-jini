@@ -109,7 +109,7 @@ export function Faq() {
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-[#1E0D01] md:text-base"
+                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-medium text-[#1E0D01] md:text-base"
                   >
                     {question}
                     <LuChevronDown

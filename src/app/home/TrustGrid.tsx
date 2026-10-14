@@ -70,7 +70,7 @@ export function TrustGrid() {
                     <Icon className="h-3.5 w-3.5" />
                   </span>
                 </span>
-                <h3 className="mt-6 font-heading text-xl font-semibold text-[#1E0D01]">
+                <h3 className="mt-6 font-heading text-xl font-medium text-[#1E0D01]">
                   {title}
                 </h3>
                 <p className="mt-2 max-w-xs text-sm leading-relaxed text-[#1E0D01]/60">

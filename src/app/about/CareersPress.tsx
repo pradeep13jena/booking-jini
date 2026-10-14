@@ -15,7 +15,7 @@ export function CareersPress() {
             <span className="text-sm font-medium text-primary">Careers</span>
             <span className="font-mono text-xs text-[#1E0D01]/40">01</span>
           </div>
-          <h2 className="mt-8 font-heading text-5xl leading-[1.05] font-semibold tracking-tight text-[#1E0D01] md:text-6xl">
+          <h2 className="mt-8 font-sans text-5xl leading-[1.05] font-semibold tracking-tight text-[#1E0D01] md:text-6xl">
             Help hotels
             <br />
             across <span className="text-primary">India</span> grow.
@@ -38,7 +38,7 @@ export function CareersPress() {
             <span className="text-sm font-medium text-primary">Press &amp; media</span>
             <span className="font-mono text-xs text-[#1E0D01]/40">02</span>
           </div>
-          <h3 className="mt-6 font-heading text-3xl font-semibold tracking-tight text-[#1E0D01]">
+          <h3 className="mt-6 font-sans text-3xl font-semibold tracking-tight text-[#1E0D01]">
             Writing about Bookingjini?
           </h3>
           <p className="mt-4 text-sm leading-relaxed text-[#1E0D01]/60">
@@ -55,7 +55,7 @@ export function CareersPress() {
               <LuArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" />
             </a>
             <p className="mt-3 text-xs text-[#1E0D01]/60">Media contact</p>
-            <p className="font-heading text-lg font-semibold text-primary">[press email]</p>
+            <p className="text-sm font-semibold text-primary">[press email]</p>
           </div>
         </Reveal>
       </div>

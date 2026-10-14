@@ -56,7 +56,7 @@ export function HowItWorks() {
                 <Icon className="h-7 w-7 text-primary" />
               </span>
 
-              <h3 className="mt-auto font-sans text-lg font-semibold text-[#1E0D01]">
+              <h3 className="mt-auto font-sans text-lg font-medium text-[#1E0D01]">
                 {title}
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-[#1E0D01]/60">
