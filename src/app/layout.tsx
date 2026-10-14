@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Urbanist, DM_Sans } from "next/font/google";
+import { Urbanist, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -10,8 +10,8 @@ const urbanist = Urbanist({
   subsets: ["latin"],
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const inter = Inter({
+  variable: "--font-inter",
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
 });
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${urbanist.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${urbanist.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="relative min-h-full flex flex-col overflow-x-clip">
         {/* Dashed vertical rails along the container edges, full page height */}

@@ -9,6 +9,8 @@ const face = (id: number) => `https://i.pravatar.cc/600?img=${id}`;
 export const DUMMY = {
   heroTeam: photo("bj-team", 1200, 800),
   heroWork: photo("bj-work", 800, 800),
+  leadership: [12, 13, 47, 59, 60].map(face),
+  // Only used by the pre-revamp About sections (CoreTeam, MissionVision) — drop with those files
   office: photo("bj-office", 1600, 900),
   team: [12, 13, 47, 59, 60, 68, 51, 52].map(face),
 };

@@ -1,15 +1,18 @@
 import type { Metadata } from 'next';
 
 import { SectionDivider } from '@/components/layout/SectionDivider';
-import { Platform } from '@/components/reusable/Platform';
+import { HowItWorks } from '@/app/home/HowItWorks';
 import { AboutHero } from './AboutHero';
+import { AboutStats } from './AboutStats';
 import { OurStory } from './OurStory';
-import { MissionVision } from './MissionVision';
-import { CoreTeam } from './CoreTeam';
-import { GrowthStats } from './GrowthStats';
-import { WhoWeServe } from './WhoWeServe';
-import { LeadershipExperience } from './LeadershipExperience';
-import { HumanSupport } from '@/components/reusable/HumanSupport';
+import { Mission } from './Mission';
+import { Values } from './Values';
+import { GovernmentTrust } from './GovernmentTrust';
+import { Founder } from './Founder';
+import { Leadership } from './Leadership';
+import { Investors } from './Investors';
+import { Headquarters } from './Headquarters';
+import { CareersPress } from './CareersPress';
 
 export const metadata: Metadata = {
   title: 'About Us | Booking Jini',
@@ -22,22 +25,28 @@ export default function AboutPage() {
     <main className='w-full'>
       <AboutHero />
       <SectionDivider />
+      <AboutStats />
+      <SectionDivider />
       <OurStory />
       <SectionDivider />
-      <MissionVision />
+      <Mission />
       <SectionDivider />
-      <CoreTeam />
+      <Values />
       <SectionDivider />
-      {/* Same product grid as the home page */}
-      <Platform />
+      <GovernmentTrust />
       <SectionDivider />
-      <GrowthStats />
+      <Founder />
       <SectionDivider />
-      <WhoWeServe />
+      <Leadership />
       <SectionDivider />
-      <LeadershipExperience />
+      <Investors />
       <SectionDivider />
-      <HumanSupport />
+      <Headquarters />
+      <SectionDivider />
+      <CareersPress />
+      <SectionDivider />
+      {/* Same steps section as the home page */}
+      <HowItWorks />
     </main>
   );
 }
