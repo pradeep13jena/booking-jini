@@ -38,7 +38,7 @@ function StrategyCard({
               {badge.label}
             </span>
           )}
-          <h2 className="font-heading text-2xl leading-tight font-medium tracking-tight text-[#1E0D01] md:text-3xl">
+          <h2 className="font-sans text-2xl leading-tight font-semibold tracking-tight text-[#1E0D01] md:text-3xl">
             {title}
           </h2>
           <div className="mt-3 text-sm leading-relaxed text-[#1E0D01]/60">{children}</div>

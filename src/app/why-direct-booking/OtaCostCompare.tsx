@@ -46,7 +46,7 @@ function CostCard({
         >
           <Icon className="h-4 w-4" />
         </span>
-        <h3 className="text-sm font-semibold text-[#1E1B4B]">{title}</h3>
+        <h3 className="font-sans text-sm font-semibold text-[#1E1B4B]">{title}</h3>
         {recommended && (
           <span className="ml-auto flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[8px] font-semibold tracking-wider text-emerald-700 uppercase">
             <LuCircleCheck className="h-2.5 w-2.5" /> Recommended

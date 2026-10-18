@@ -13,17 +13,19 @@ export function IconCardGrid({
   title,
   description,
   items,
+  titleFont = "heading",
 }: {
   badge?: string;
   badgeIcon?: ReactNode;
   title: string;
   description?: string;
   items: IconCard[];
+  titleFont?: "heading" | "sans";
 }) {
   return (
     <section className="w-full">
       <div className="container px-6 py-16 md:py-20">
-        <SectionHeading badge={badge} icon={badgeIcon} title={title} description={description} />
+        <SectionHeading badge={badge} icon={badgeIcon} title={title} description={description} font={titleFont} />
 
         <ul className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-5 sm:grid-cols-2">
           {items.map(({ icon: Icon, title, description }, i) => (

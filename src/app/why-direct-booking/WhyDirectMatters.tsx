@@ -26,5 +26,5 @@ const REASONS: IconCard[] = [
 ];
 
 export function WhyDirectMatters() {
-  return <IconCardGrid title="Why direct bookings matter" items={REASONS} />;
+  return <IconCardGrid title="Why direct bookings matter" titleFont="sans" items={REASONS} />;
 }
