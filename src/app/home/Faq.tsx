@@ -10,7 +10,9 @@ import { Placeholder } from "./Placeholder";
 import { Reveal } from "@/components/reusable/Reveal";
 import { SectionHeading } from "@/components/reusable/SectionHeading";
 
-const FAQS: { question: string; answer: ReactNode }[] = [
+export type FaqItem = { question: string; answer: ReactNode };
+
+const FAQS: FaqItem[] = [
   {
     question: "Can Bookingjini work with my existing hotel systems?",
     answer: (
@@ -61,7 +63,8 @@ const FAQS: { question: string; answer: ReactNode }[] = [
   },
 ];
 
-export function Faq() {
+// `items` lets other pages reuse this section with their own questions
+export function Faq({ items = FAQS }: { items?: FaqItem[] }) {
   // Single-open accordion; first question expanded by default
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const reduceMotion = useReducedMotion();
@@ -90,7 +93,7 @@ export function Faq() {
         </div>
 
         <ul className="flex flex-col gap-3">
-          {FAQS.map(({ question, answer }, i) => {
+          {items.map(({ question, answer }, i) => {
             const isOpen = openIndex === i;
             const buttonId = `${baseId}-q${i}`;
             const panelId = `${baseId}-a${i}`;
@@ -135,7 +138,7 @@ export function Faq() {
                       className="overflow-hidden"
                     >
                       <div className="space-y-3 px-5 pb-5 text-sm leading-relaxed text-[#1E0D01]/60">
-                        {answer}
+                        {typeof answer === "string" ? <p>{answer}</p> : answer}
                       </div>
                     </motion.div>
                   )}
