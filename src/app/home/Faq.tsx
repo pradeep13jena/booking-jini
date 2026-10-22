@@ -63,8 +63,10 @@ const FAQS: FaqItem[] = [
   },
 ];
 
-// `items` lets other pages reuse this section with their own questions
-export function Faq({ items = FAQS }: { items?: FaqItem[] }) {
+// `items` lets other pages reuse this section with their own questions;
+// `font="heading"` sets the title and questions in Urbanist semibold (Contact page design)
+export function Faq({ items = FAQS, font = "sans" }: { items?: FaqItem[]; font?: "sans" | "heading" }) {
+  const heading = font === "heading";
   // Single-open accordion; first question expanded by default
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const reduceMotion = useReducedMotion();
@@ -78,7 +80,8 @@ export function Faq({ items = FAQS }: { items?: FaqItem[] }) {
           <SectionHeading
             align="left"
             badge="FAQs"
-            font="sans"
+            font={font}
+            weight="semibold"
             title="Frequently Asked Questions"
             description="From setup to support, here are the answers you need to launch faster with confidence."
           />
@@ -105,14 +108,17 @@ export function Faq({ items = FAQS }: { items?: FaqItem[] }) {
                 index={i}
                 className="rounded-2xl border border-black/5 bg-white/60"
               >
-                <h3 className="font-sans">
+                <h3 className={heading ? "font-heading" : "font-sans"}>
                   <button
                     id={buttonId}
                     type="button"
                     aria-expanded={isOpen}
                     aria-controls={panelId}
                     onClick={() => setOpenIndex(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-medium text-[#1E0D01] md:text-base"
+                    className={cn(
+                      "flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-[#1E0D01]",
+                      heading ? "text-base font-semibold md:text-lg" : "text-sm font-medium md:text-base"
+                    )}
                   >
                     {question}
                     <LuChevronDown
