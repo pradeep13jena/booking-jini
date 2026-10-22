@@ -137,7 +137,7 @@ export function Footer() {
               />
             </Link>
 
-            <p className="mt-4 max-w-sm text-base leading-7 text-muted-foreground opacity-60 font-bold font-heading">
+            <p className="mt-4 max-w-sm text-base leading-7 text-muted-foreground opacity-60 font-medium font-heading">
               The leading direct booking platform engineered to reduce hotel
               dependence on high commission OTAs.
             </p>
@@ -164,7 +164,7 @@ export function Footer() {
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h3 className="font-heading font-bold text-2xl text-muted-foreground">
+              <h3 className="font-heading font-medium text-2xl text-muted-foreground">
                 {section.title}
               </h3>
 
@@ -173,7 +173,7 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="font-subheading text-base font-bold text-muted-foreground opacity-60 transition-colors duration-300 hover:opacity-100"
+                      className="font-subheading text-base font-medium text-muted-foreground opacity-60 transition-colors duration-300 hover:opacity-100"
                     >
                       {link.label}
                     </Link>
@@ -185,7 +185,7 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-16 bg-white rounded-xl text-base px-6 py-6 font-bold text-muted-foreground opacity-60 md:px-7">
+        <div className="mt-16 bg-white rounded-xl text-base px-6 py-6 font-medium text-muted-foreground opacity-60 md:px-7">
           © 2026 Bookingjini. All rights reserved. Registered trademark of
           Bookingjini technologies.
         </div>

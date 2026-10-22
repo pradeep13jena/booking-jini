@@ -46,14 +46,14 @@ export function HowItWorks() {
               as="li"
               key={title}
               index={i}
-              className={`flex h-full flex-col rounded-3xl p-5 ${bg}`}
+              className={`flex h-95.75 flex-col rounded-3xl p-5 ${bg}`}
             >
               <span className="flex size-8 items-center justify-center rounded-full border border-primary/20 bg-white text-xs font-medium text-primary">
                 {String(i + 1).padStart(2, "0")}
               </span>
 
               <span className="mx-auto my-10 flex size-14 items-center justify-center rounded-xl bg-white shadow-[0_4px_16px_rgba(249,117,24,0.12)]">
-                <Icon className="h-7 w-7 text-primary" />
+                <Icon className="h-20.75 w-7 text-primary" />
               </span>
 
               <h3 className="mt-auto font-sans text-lg font-medium text-[#1E0D01]">

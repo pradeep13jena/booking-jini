@@ -73,7 +73,7 @@ export function ProfitLeak() {
                 Every OTA booking
               </p>
 
-              <p className="relative mt-auto pt-16 font-heading text-7xl font-bold tracking-tight md:text-8xl">
+              <p className="relative mt-auto pt-16 font-heading text-6xl font-bold tracking-tight md:text-7xl">
                 15–25<span className="text-primary">%</span>
               </p>
               <h3 className="relative mt-4 font-sans text-2xl font-semibold">
