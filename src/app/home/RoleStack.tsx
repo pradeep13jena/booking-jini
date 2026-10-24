@@ -1,12 +1,12 @@
-import type { ReactNode } from "react";
+import Image, { type StaticImageData } from "next/image";
 import type { IconType } from "react-icons";
 import { LuBriefcase, LuChartLine, LuCircleCheck, LuConciergeBell, LuZap } from "react-icons/lu";
 
 import { SectionHeading } from "@/components/reusable/SectionHeading";
 import { StickyStack } from "@/components/reusable/StickyStack";
-import { FrontDeskMockup, ManagerMockup, OwnerMockup } from "./RoleMockups";
+import { featureimage1, featureimage2, featureimage3 } from "@/lib/image";
 
-const ROLES: { icon: IconType; role: string; title: string; points: string[]; mockup: ReactNode }[] = [
+const ROLES: { icon: IconType; role: string; title: string; points: string[]; image: StaticImageData }[] = [
   {
     icon: LuBriefcase,
     role: "Owners",
@@ -16,7 +16,7 @@ const ROLES: { icon: IconType; role: string; title: string; points: string[]; mo
       "Track direct vs OTA share month by month",
       "One subscription replaces several tools",
     ],
-    mockup: <OwnerMockup />,
+    image: featureimage3,
   },
   {
     icon: LuChartLine,
@@ -27,7 +27,7 @@ const ROLES: { icon: IconType; role: string; title: string; points: string[]; mo
       "Push rates to every channel at once",
       "CRM campaigns that bring guests back direct",
     ],
-    mockup: <ManagerMockup />,
+    image: featureimage1,
   },
   {
     icon: LuConciergeBell,
@@ -38,7 +38,7 @@ const ROLES: { icon: IconType; role: string; title: string; points: string[]; mo
       "Inventory syncs across channels in real time",
       "Help from someone who has run a desk",
     ],
-    mockup: <FrontDeskMockup />,
+    image: featureimage2,
   },
 ];
 
@@ -65,11 +65,14 @@ function RoleCard({ role }: { role: (typeof ROLES)[number] }) {
         </ul>
       </div>
 
-      <div
-        aria-hidden
-        className="relative h-64 overflow-hidden rounded-xl bg-linear-to-br from-[#FAFAFA] via-[#FDF3EC] to-[#FBE3D3] md:h-80"
-      >
-        {role.mockup}
+      {/* Rendered at its natural aspect ratio so the whole illustration shows; it carries its own background */}
+      <div className="flex items-center justify-center overflow-hidden rounded-xl bg-[#F5F5F5]">
+        <Image
+          src={role.image}
+          alt=""
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="h-auto w-full"
+        />
       </div>
     </article>
   );

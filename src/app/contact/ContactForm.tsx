@@ -36,7 +36,7 @@ export function ContactForm() {
   };
 
   return (
-    <form onSubmit={onSubmit} className="flex h-full flex-col rounded-2xl bg-white p-6 md:p-7">
+    <form id="contact-form" onSubmit={onSubmit} className="flex h-full scroll-mt-28 flex-col rounded-2xl bg-white p-6 md:p-7">
       <h2 className="font-heading text-2xl font-medium text-[#1E0D01] md:text-3xl">Send us a message</h2>
       <p className="mt-2 text-sm text-[#1E0D01]/60">Fill out the form to reach out.</p>
 

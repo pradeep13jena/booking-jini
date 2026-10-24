@@ -6,6 +6,7 @@ import { CaseStudiesHero } from './CaseStudiesHero';
 import { IndependentHotels } from './IndependentHotels';
 import { GovernmentPartners } from './GovernmentPartners';
 import { RESULT_STATS } from './data';
+import { CtaBanner } from '@/components/reusable/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'Customer Case Studies | Booking Jini',
@@ -23,6 +24,14 @@ export default function CustomerCaseStudiesPage() {
       <IndependentHotels />
       <SectionDivider />
       <GovernmentPartners />
+      <SectionDivider />
+      <CtaBanner
+        variant='dark'
+        title='Your hotel could be our next'
+        accent='story.'
+        description="In 20 minutes we'll show you real numbers for your hotel. No obligation."
+        secondary={{ text: 'Talk to our team', href: '/contact' }}
+      />
     </main>
   );
 }

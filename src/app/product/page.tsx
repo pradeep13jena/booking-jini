@@ -10,6 +10,7 @@ import { PillarSections } from './PillarSections';
 import { BuiltFor } from './BuiltFor';
 import { Foundation } from './Foundation';
 import { PRODUCT_FAQS } from './data';
+import { CtaBanner } from '@/components/reusable/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'Products | Booking Jini',
@@ -47,6 +48,14 @@ export default function ProductPage() {
       />
       <SectionDivider />
       <Faq items={PRODUCT_FAQS} font='heading' />
+      <SectionDivider />
+      <CtaBanner
+        variant='dark'
+        title='See the whole platform working for your'
+        accent='hotel.'
+        description="In 20 minutes we'll show you how much you could save on commission and time. No obligation."
+        secondary={{ text: 'Book a Demo', href: '/contact' }}
+      />
     </main>
   );
 }

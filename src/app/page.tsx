@@ -13,6 +13,7 @@ import { RoleStack } from './home/RoleStack';
 import { HowItWorks } from './home/HowItWorks';
 import { Platform } from '@/components/reusable/Platform';
 import { Faq } from './home/Faq';
+import { CtaBanner } from '@/components/reusable/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'Home | Booking Jini',
@@ -44,6 +45,12 @@ export default function HomePage() {
       <Platform />
       <SectionDivider />
       <Faq />
+      <SectionDivider />
+      <CtaBanner
+        title='Find out how much commission you could keep.'
+        description="In 20 minutes we'll show you real numbers for your hotel. No obligation."
+        secondary={{ text: 'Talk to our team', href: '/contact' }}
+      />
     </main>
   );
 }

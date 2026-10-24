@@ -1,10 +1,40 @@
 import type { StaticImageData } from "next/image";
 
 import type { StatCard } from "@/components/reusable/StatCards";
+import {
+  damsonPlum,
+  empires,
+  goldenTree,
+  grandContinental,
+  grandRadiant,
+  holidayResort,
+  hotelIrada,
+  hotelLa,
+  landmarkShimla,
+  landmarkTowers,
+  leeGarden,
+  lineage,
+  lohmod,
+  nagpalRegency,
+  norkhil,
+  palmCourt,
+  papayaTree,
+  radhika,
+  ramayana,
+  redMaple,
+  royalArk,
+  sanpra,
+  sayeman,
+  seagull,
+  travancoreCourt,
+  triton,
+  urbanPark,
+  w,
+  sjs
+} from "@/lib/image";
 
 // All listings for the Customer case studies page live here, so content edits never touch the components.
-// Logos: add a static import (e.g. `import sayeman from "@/components/assets/customers/sayeman.png"`)
-// and set `logo` — entries without one fall back to a text wordmark.
+// Logos: add a static import to src/lib/image.ts and set `logo` — entries without one fall back to a text wordmark.
 
 // Static imports only: next/image reads their size, so no width/height is needed per logo
 export type Logo = StaticImageData;
@@ -15,40 +45,41 @@ export const RESULT_STATS: StatCard[] = [
   { value: "6", accent: "x", label: "Website bookings, ₹40 lakh to ₹2.4 crore" },
 ];
 
-export type IndependentHotel = { id: string; name: string; logo?: Logo };
+// `mono`: the logo is white artwork, so it's rendered as a dark silhouette to stay visible on the white grid
+export type IndependentHotel = { id: string; name: string; logo?: Logo; mono?: boolean };
 
-// TODO: the design repeats "Hotel" / "Hotel Crest" as filler — replace with the real hotel names
+// TODO: "hotel-2" is still design filler — sjs.jpeg / w.png in src/lib/image.ts are unnamed candidates
 export const INDEPENDENT_HOTELS: IndependentHotel[] = [
-  { id: "sayeman", name: "Sayeman Beach Resort" },
-  { id: "holiday-resort", name: "Holiday Resort Puri" },
-  { id: "landmark-towers", name: "The Landmark Towers" },
-  { id: "sanpra", name: "Sanpra Bay View Hotel" },
-  { id: "ramayana", name: "Ramayana" },
-  { id: "hotel-crest-1", name: "Hotel Crest" },
-  { id: "hotel-la", name: "Hotel LA" },
-  { id: "landmark-shimla", name: "Hotel Landmark Shimla" },
-  { id: "triton", name: "Hotel Triton" },
-  { id: "damson-plum", name: "Damson Plum" },
-  { id: "urban-park", name: "Hotel Urban Park" },
-  { id: "empires", name: "Empires Hotel" },
-  { id: "hotel-1", name: "Hotel" },
-  { id: "golden-tree", name: "Golden Tree" },
-  { id: "palm-court", name: "The Palm Court" },
-  { id: "papaya-tree", name: "Papaya Tree" },
-  { id: "hotel-crest-2", name: "Hotel Crest" },
-  { id: "hotel-crest-3", name: "Hotel Crest" },
-  { id: "lohmod", name: "The Lohmod" },
-  { id: "lineage", name: "Lineage" },
-  { id: "grand-radiant", name: "The Grand Radiant" },
-  { id: "grand-continental", name: "Grand Continental" },
+  { id: "sayeman", name: "Sayeman Beach Resort", logo: sayeman },
+  { id: "holiday-resort", name: "Holiday Resort Puri", logo: holidayResort },
+  { id: "landmark-towers", name: "The Landmark Towers", logo: landmarkTowers, mono: true },
+  { id: "sanpra", name: "Sanpra Bay View Hotel", logo: sanpra },
+  { id: "ramayana", name: "Ramayana", logo: ramayana },
+  { id: "lee-garden", name: "Hotel Lee Garden", logo: leeGarden },
+  { id: "hotel-la", name: "Hotel LA", logo: hotelLa },
+  { id: "landmark-shimla", name: "Hotel Landmark Shimla", logo: landmarkShimla },
+  { id: "triton", name: "Hotel Triton", logo: triton },
+  { id: "damson-plum", name: "Damson Plum", logo: damsonPlum },
+  { id: "urban-park", name: "Hotel Urban Park", logo: urbanPark },
+  { id: "empires", name: "Empires Hotel", logo: empires },
+  { id: "nagpal-regency", name: "Hotel Nagpal Regency", logo: nagpalRegency },
+  { id: "golden-tree", name: "Golden Tree", logo: goldenTree },
+  { id: "palm-court", name: "The Palm Court", logo: palmCourt },
+  { id: "papaya-tree", name: "Papaya Tree", logo: papayaTree },
+  { id: "travancore-court", name: "Travancore Court", logo: travancoreCourt },
+  { id: "red-maple", name: "The Red Maple Hill Hotel", logo: redMaple, mono: true },
+  { id: "lohmod", name: "The Lohmod", logo: lohmod },
+  { id: "lineage", name: "Lineage", logo: lineage },
+  { id: "grand-radiant", name: "The Grand Radiant", logo: grandRadiant, mono: true },
+  { id: "grand-continental", name: "Grand Continental", logo: grandContinental },
   { id: "hotel-2", name: "Hotel" },
-  { id: "royal-ark", name: "The Royal Ark" },
-  { id: "irada", name: "Hotel Irada" },
-  { id: "radhika", name: "Radhika Beach Resort & Spa" },
-  { id: "seagull-hotels", name: "Seagull Hotels Ltd" },
-  { id: "seagull-resort", name: "Seagull Resort & Spa Village" },
-  { id: "norkhil", name: "Norkhil" },
-  { id: "miracle-regency", name: "Hotel Miracle Regency" },
+  { id: "royal-ark", name: "The Royal Ark", logo: royalArk },
+  { id: "irada", name: "Hotel Irada", logo: hotelIrada, mono: true },
+  { id: "radhika", name: "Radhika Beach Resort & Spa", logo: radhika },
+  { id: "seagull-resort", name: "Seagull Resort & Spa Village", logo: seagull },
+  { id: "norkhil", name: "Norkhil", logo: norkhil },
+  { id: "SJS", name: "Hotel Miracle Regency", logo: sjs },
+  { id: "W", name: "W", logo: w},
 ];
 
 export const HOTELS_FOOTNOTE =

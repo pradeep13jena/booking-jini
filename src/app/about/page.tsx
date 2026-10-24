@@ -13,6 +13,7 @@ import { Leadership } from './Leadership';
 import { Investors } from './Investors';
 import { Headquarters } from './Headquarters';
 import { CareersPress } from './CareersPress';
+import { CtaBanner } from '@/components/reusable/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'About Us | Booking Jini',
@@ -47,6 +48,13 @@ export default function AboutPage() {
       <SectionDivider />
       {/* Same steps section as the home page */}
       <HowItWorks />
+      <SectionDivider />
+      <CtaBanner
+        title='Join 9,300+ hotels keeping more of every booking.'
+        description="In 20 minutes we'll show you real numbers for your hotel. No obligation."
+        secondary={{ text: 'Talk to our team', href: '/contact' }}
+        font='heading'
+      />
     </main>
   );
 }

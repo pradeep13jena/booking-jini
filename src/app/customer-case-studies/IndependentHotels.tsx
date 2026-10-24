@@ -28,7 +28,7 @@ export function IndependentHotels() {
                   <Image
                     src={hotel.logo}
                     alt={hotel.name}
-                    className="max-h-12 w-auto object-contain opacity-70 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+                    className={`max-h-12 w-auto object-contain opacity-100 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0 ${hotel.mono ? "brightness-0" : ""}`}
                   />
                 ) : (
                   <span className="text-xs font-medium text-[#C2AE9B] transition-colors duration-300 group-hover:text-[#1E0D01]">

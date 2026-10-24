@@ -11,6 +11,7 @@ import { CompareTable } from './CompareTable';
 import { RoiCalculator } from './RoiCalculator';
 import { Results } from './Results';
 import { PRICING_FAQS } from './data';
+import { CtaBanner } from '@/components/reusable/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'Pricing | Booking Jini',
@@ -40,6 +41,13 @@ export default function PricingPage() {
       <Results />
       <SectionDivider />
       <Faq items={PRICING_FAQS} />
+      <SectionDivider />
+      <CtaBanner
+        variant='dark'
+        title='Not sure which plan is right?'
+        description="Tell us about your hotel. In 20 minutes we'll recommend a plan and show you what you could save on commission."
+        secondary={{ text: 'Talk to Sales', href: '/contact' }}
+      />
     </main>
   );
 }
