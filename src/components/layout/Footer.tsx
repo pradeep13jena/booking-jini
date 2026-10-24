@@ -10,7 +10,7 @@ import {
   FaTelegramPlane,
 } from "react-icons/fa";
 
-import { Orangelogo } from "@/components/assets/image";
+import { Orangelogo } from "../../lib/image";
 import { SectionDivider } from "@/components/layout/SectionDivider";
 
 const footerSections = [
