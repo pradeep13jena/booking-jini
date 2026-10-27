@@ -7,6 +7,7 @@ import { StatsStrip } from './home/StatsStrip';
 import { CompanyMarque } from './home/CompanyMarque';
 import { ProfitLeak } from './home/ProfitLeak';
 import { Outcomes } from './home/Outcomes';
+import { CommissionCalculator } from './home/CommissionCalculator';
 import { CaseStudies } from './home/CaseStudies';
 import { TrustGrid } from './home/TrustGrid';
 import { RoleStack } from './home/RoleStack';
@@ -33,6 +34,8 @@ export default function HomePage() {
       <ProfitLeak />
       <SectionDivider />
       <Outcomes />
+      <SectionDivider />
+      <CommissionCalculator />
       <SectionDivider />
       <CaseStudies />
       <SectionDivider />

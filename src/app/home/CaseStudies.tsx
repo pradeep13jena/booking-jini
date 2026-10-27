@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
 import { FaQuoteRight, FaStar } from "react-icons/fa";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
@@ -12,56 +11,29 @@ import { SectionHeading } from "@/components/reusable/SectionHeading";
 interface Testimonial {
   initials: string;
   name: string;
-  quote: ReactNode;
-  meta: ReactNode;
+  quote: string;
+  meta?: string;
 }
 
-// Copy in <Placeholder> is waiting on real customer quotes
 const TESTIMONIALS: Testimonial[] = [
   {
-    initials: "HR",
-    name: "Himalayan Retreat",
-    quote: (
-      <Placeholder>
-        [Result in numbers, e.g. our OTA share dropped from 70% to 45% in one
-        season.]
-      </Placeholder>
-    ),
-    meta: (
-      <>
-        <Placeholder>[Name, Owner]</Placeholder> ·{" "}
-        <Placeholder>[City · rooms]</Placeholder>
-      </>
-    ),
+    initials: "PR",
+    name: "Pranavam Resort & Spa",
+    quote:
+      "The start of my interaction with company staff was good. I really liked their professionalism. The training part went well although punctuality was an issue. In hospitality industry responsiveness is very important. With assigned Account Manager to my business, I must say changed drastically and all the praise for her attitude, professionalism and responsiveness.",
   },
   {
-    initials: "AG",
-    name: "Anamika Gupta",
-    quote: (
-      <Placeholder>
-        [Time saved, e.g. rate updates that took 2 hours now take 5 minutes.]
-      </Placeholder>
-    ),
-    meta: (
-      <>
-        <Placeholder>[Role]</Placeholder> · Hotel Mistywoods
-      </>
-    ),
+    initials: "HF",
+    name: "Hill Fort Hotel And Resort",
+    quote:
+      "Best channel manager and booking engine! Overall, a great experience. The onboarding was completed in just 3 hours. My Account Manager coordinated everything very well and explained the software in a simple and easy-to-understand manner. Highly recommended!",
   },
   {
-    initials: "WA",
-    name: "Weekend Address",
-    quote: (
-      <Placeholder>
-        [Support story, e.g. a real person picked up at 2 am and fixed it.]
-      </Placeholder>
-    ),
-    meta: (
-      <>
-        <Placeholder>[Name, GM]</Placeholder> ·{" "}
-        <Placeholder>[City · rooms]</Placeholder>
-      </>
-    ),
+    initials: "KH",
+    name: "Kasauli Hills",
+    quote:
+      "I am a hotel owner from Kasauli, and I have been using BookingJini products for the past nine months. My experience has been very positive, particularly in terms of training and customer support. The team has been consistently helpful and responsive. I would strongly recommend BookingJini to my fellow hoteliers.",
+    meta: "Hotel owner · Kasauli",
   },
 ];
 
@@ -199,9 +171,11 @@ export function CaseStudies() {
                       <span className="block text-sm font-semibold text-[#1E0D01]">
                         {t.name}
                       </span>
-                      <span className="block text-xs text-[#1E0D01]/60">
-                        {t.meta}
-                      </span>
+                      {t.meta && (
+                        <span className="block text-xs text-[#1E0D01]/60">
+                          {t.meta}
+                        </span>
+                      )}
                     </span>
                   </figcaption>
                 </figure>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { cn } from "@/lib/utils";
-import { holidayResort, radhika, sayeman, seagull, triton } from "@/lib/image";
+import { CTAimage, holidayResort, radhika, sayeman, seagull, triton } from "@/lib/image";
 import { Reveal } from "./Reveal";
 
 type CtaLink = { text: string; href: string };
@@ -65,14 +65,17 @@ function OrangeCard({
   font,
 }: Pick<CtaBannerProps, "title" | "description" | "secondary" | "font"> & { primary: CtaLink }) {
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-linear-to-r from-[#FF8A00] via-[#FF9900] to-[#FF9D00] px-6 py-16 text-center text-white md:py-24">
-      {/* Swooshes: oversized ellipses anchored bottom-left, each a slightly deeper orange */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        <span className="absolute -bottom-[60%] -left-[45%] h-[220%] w-[90%] rounded-[50%] bg-[#FF9200]/60" />
-        <span className="absolute -bottom-[60%] -left-[40%] h-[220%] w-[70%] rounded-[50%] bg-[#FF8400]/70" />
-        <span className="absolute -bottom-[60%] -left-[35%] h-[220%] w-[50%] rounded-[50%] bg-[#FF7500]/80" />
-        <span className="absolute -bottom-[60%] -left-[30%] h-[220%] w-[35%] rounded-[50%] bg-[#FF6500]" />
-      </div>
+    <div className="relative overflow-hidden rounded-3xl bg-[#FF9900] px-6 py-16 text-center text-white md:py-24">
+      {/* Swoosh artwork; pinned bottom-left so the swooshes survive cropping on narrow screens */}
+      <Image
+        src={CTAimage}
+        alt=""
+        aria-hidden
+        fill
+        sizes="(min-width: 1200px) 1200px, 100vw"
+        placeholder="blur"
+        className="pointer-events-none object-cover object-left-bottom"
+      />
 
       <div className="relative mx-auto flex max-w-2xl flex-col items-center">
         <h2

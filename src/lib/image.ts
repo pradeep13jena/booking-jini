@@ -49,6 +49,9 @@ import hotelLa from "../../public/company-marque/Untitled-design-63.png";
 import urbanPark from "../../public/company-marque/urbanpark.png";
 import w from "../../public/company-marque/w.png"; // TODO: unknown hotel — "W" monogram only
 
+// reusable
+import CTAimage from "../../public/reusable/CTAimage.png"
+
 export {
   // company Logo
   Orangelogo,
@@ -100,4 +103,8 @@ export {
   triton,
   urbanPark,
   w,
+
+  // reusable
+
+  CTAimage
 };
