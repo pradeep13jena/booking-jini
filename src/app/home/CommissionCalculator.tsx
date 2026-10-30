@@ -155,7 +155,7 @@ export function CommissionCalculator() {
   ];
 
   return (
-    <section className="w-full">
+    <section id="commission-calculator" className="w-full scroll-mt-24">
       <div className="container px-6 py-16 md:py-20">
         <SectionHeading
           badge="Commission calculator"

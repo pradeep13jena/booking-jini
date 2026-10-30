@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { SectionDivider } from "@/components/layout/SectionDivider";
@@ -10,58 +11,27 @@ import { cn } from "@/lib/utils";
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 const navigationItems = [
-  {
-    label: "Products",
-    href: "/products",
-    productItems: [
-      {
-        label: "Booking Engine",
-        href: "/products/booking-engine",
-        description: "",
-      },
-      {
-        label: "Channel Manager",
-        href: "/products/channel-manager",
-        description: "",
-      },
-      {
-        label: "PMS",
-        href: "/products/pms",
-        description: "",
-      },
-    ],
-  },
-  {
-    label: "Solution",
-    href: "/solution",
-  },
-  {
-    label: "Customer",
-    href: "/customer",
-  },
-  {
-    label: "Blog",
-    href: "/blog",
-  },
-  {
-    label: "About us",
-    href: "/about",
-  },
+  { label: "Products", href: "/product" },
+  { label: "Pricing", href: "/pricing-page" },
+  // { label: "Solutions", href: "/solutions-by-segment" },
+  { label: "Customers", href: "/customer-case-studies" },
+  { label: "Resources", href: "/resources" },
+  { label: "Company", href: "/about" },
 ];
 
 const navItemClass =
-  "text-sm font-semibold hover:text-primary transition-colors duration-300 cursor-pointer hover:bg-transparent focus:bg-transparent data-popup-open:bg-transparent data-popup-open:hover:bg-transparent data-open:bg-transparent data-open:hover:bg-transparent data-open:focus:bg-transparent data-active:bg-transparent data-active:hover:bg-transparent data-active:focus:bg-transparent";
+  "text-sm font-medium text-[#1E0D01]/80 hover:text-primary transition-colors duration-300 cursor-pointer hover:bg-transparent focus:bg-transparent data-active:bg-transparent data-active:hover:bg-transparent data-active:focus:bg-transparent";
 
 export function Navbar() {
+  const pathname = usePathname();
+
   return (
     <header className="sticky top-0 z-50 w-full bg-background">
       {/* Own rails — the header's solid bg covers the global overlay in layout.tsx */}
@@ -76,56 +46,48 @@ export function Navbar() {
           />
         </Link>
 
-        {/* Navigation */}
-        <NavigationMenu>
-          <NavigationMenuList className="gap-1">
-            {navigationItems.map((item) => (
-              <NavigationMenuItem key={item.label}>
-                {item.productItems ? (
-                  <>
-                    <NavigationMenuTrigger className={navItemClass}>
-                      {item.label}
-                    </NavigationMenuTrigger>
+        <div className="flex items-center gap-3">
+          {/* Navigation */}
+          <NavigationMenu>
+            <NavigationMenuList className="gap-1">
+              {navigationItems.map((item) => {
+                // Highlight the current section, including its nested routes
+                const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
 
-                    <NavigationMenuContent>
-                      <ul className="grid w-content gap-2 p-2">
-                        {item.productItems.map((product) => (
-                          <li key={product.label}>
-                            <NavigationMenuLink
-                              render={({ className }) => (
-                                <Link
-                                  href={product.href}
-                                  className={cn(className, navItemClass)}
-                                >
-                                  {product.label}
-                                </Link>
-                              )}
-                            />
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </>
-                ) : (
-                  <NavigationMenuLink
-                    render={({ className }) => (
-                      <Link
-                        href={item.href}
-                        className={cn(className, navItemClass)}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                    className={navigationMenuTriggerStyle()}
-                  />
-                )}
-              </NavigationMenuItem>
-            ))}
-          </NavigationMenuList>
-        </NavigationMenu>
+                return (
+                  <NavigationMenuItem key={item.label}>
+                    <NavigationMenuLink
+                      render={({ className }) => (
+                        <Link
+                          href={item.href}
+                          aria-current={isActive ? "page" : undefined}
+                          className={cn(className, navItemClass, isActive && "text-primary")}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                      className={navigationMenuTriggerStyle()}
+                    />
+                  </NavigationMenuItem>
+                );
+              })}
+            </NavigationMenuList>
+          </NavigationMenu>
 
-        {/* CTA */}
-        <AnimatedButton text="Get Started" href="/contact" />
+          {/* CTAs */}
+          <Link
+            href="/#commission-calculator"
+            className="rounded-full border border-black/10 bg-white px-5 py-2.5 text-sm font-semibold whitespace-nowrap text-[#1E0D01] transition-colors duration-300 hover:border-primary hover:text-primary"
+          >
+            Commission calculator
+          </Link>
+          <AnimatedButton
+            text="Get Free Revenue Check"
+            href="/contact"
+            colorDirection="left"
+            className="font-semibold shadow-[0_10px_28px_rgba(249,115,22,0.3)]"
+          />
+        </div>
       </div>
       <SectionDivider />
     </header>
