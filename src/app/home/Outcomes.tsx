@@ -102,7 +102,7 @@ const OUTCOMES: Outcome[] = [
       "Change a rate once and it updates on every channel. No double bookings. No copying between systems.",
     note: (
       <>
-        Saves <Placeholder>[X] hours</Placeholder> per front desk shift every
+        Saves <Placeholder>22 hours</Placeholder> per front desk shift every
         week.
       </>
     ),

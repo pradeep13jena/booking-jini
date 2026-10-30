@@ -88,7 +88,7 @@ export function RoleStack() {
           title="One platform. A clear win for each role."
         />
 
-        <StickyStack className="mt-10 md:mt-14">
+        <StickyStack className="mt-10 gap-[12vh] md:mt-14">
           {ROLES.map((role) => (
             <RoleCard key={role.role} role={role} />
           ))}

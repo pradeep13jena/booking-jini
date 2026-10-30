@@ -13,9 +13,9 @@ export function Pill({ icon: Icon, children, className }: { icon: IconType; chil
         className
       )}
     >
-      <span className="flex size-5 items-center justify-center rounded-full bg-primary/10 text-primary">
+      {/* <span className="flex size-5 items-center justify-center rounded-full bg-primary/10 text-primary">
         <Icon className="h-3 w-3" />
-      </span>
+      </span> */}
       {children}
     </span>
   );

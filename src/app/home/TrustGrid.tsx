@@ -35,7 +35,7 @@ const TRUST_POINTS: { icon: IconType; title: string; description: string }[] = [
     icon: FaShieldAlt,
     title: "Secure payments",
     description:
-      "PayU, Stripe and [others]. [Add compliance only if certified]",
+      "PayU, Stripe, Airpay, razorpay, easebuzz, Worldline, ICICI, HDFC.",
   },
   {
     icon: FaUserShield,
@@ -45,8 +45,8 @@ const TRUST_POINTS: { icon: IconType; title: string; description: string }[] = [
   },
   {
     icon: FaAward,
-    title: "[X] years in hotel tech",
-    description: "Built for Indian hospitality since [founding year].",
+    title: "10 years in hotel tech",
+    description: "Built for Indian hospitality since 2017.",
   },
 ];
 

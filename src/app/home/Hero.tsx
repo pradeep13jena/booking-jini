@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { FaRegSmile } from "react-icons/fa";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
 import {
@@ -52,7 +51,7 @@ export function Hero() {
           custom={HERO_CONTENT_DELAY}
           className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white/60 px-4 py-2 text-sm font-medium text-[#1E0D01] backdrop-blur-sm md:text-base"
         >
-          <FaRegSmile className="h-5 w-5 text-primary" />
+          {/* <FaRegSmile className="h-5 w-5 text-primary" /> */}
           Zero commission on every direct booking
         </motion.div>
 

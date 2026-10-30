@@ -47,19 +47,87 @@ const FAQS: FaqItem[] = [
   },
   {
     question: "Which Bookingjini products do I need?",
-    answer: <Placeholder>[Answer to be written]</Placeholder>,
+    answer: (
+      <>
+        <p>
+          For most hotels, the answer is all of them. Bookingjini is an all-in-one
+          platform with 32 connected products across four groups: Sell Direct,
+          Distribute, Manage, and Retain.
+        </p>
+        <p>
+          Sell Direct includes the booking engine and website. Distribute
+          includes the channel manager and revenue management. Manage covers
+          PMS, POS, and payments, while Retain includes guest CRM and reviews.
+        </p>
+        <p>
+          A booking on any channel instantly updates your rooms, rates, billing,
+          and guest profile. That means no double entry, no juggling multiple
+          vendors, and one login for your entire team.
+        </p>
+        <p>
+          If you'd rather start small, the Booking Engine and Channel Manager
+          are a good first step. You can add the rest anytime, and our team can
+          help you choose the right combination for your property.
+        </p>
+      </>
+    ),
   },
   {
     question: "Can Bookingjini support multiple properties?",
-    answer: <Placeholder>[Answer to be written]</Placeholder>,
+    answer: (
+      <>
+        <p>
+          Yes. Bookingjini works for single hotels, chains with 40+ properties,
+          and state tourism corporations.
+        </p>
+        <p>
+          You can manage rates, inventory, reservations, and reports for every
+          property from one dashboard, while each property maintains its own
+          settings and staff access.
+        </p>
+        <p>
+          Groups also get a Central Reservation System (CRS), allowing guests
+          to search and book across all your properties, along with portfolio
+          reporting and a dedicated account manager.
+        </p>
+      </>
+    ),
   },
   {
     question: "Is support available after onboarding?",
-    answer: <Placeholder>[Answer to be written]</Placeholder>,
+    answer: (
+      <>
+        <p>
+          Yes. Every customer gets human support by phone and email. You also
+          have access to self-help resources within the Bookingjini extranet.
+        </p>
+        <p>
+          These include FAQs, a chatbot that answers common questions instantly,
+          our help centre, and video tutorials.
+        </p>
+        <p>
+          Your account manager checks in regularly, helps you make the most of
+          new features, and can train new staff at no extra cost. Product
+          updates are always included.
+        </p>
+      </>
+    ),
   },
   {
     question: "How does the free trial work?",
-    answer: <Placeholder>[Answer to be written]</Placeholder>,
+    answer: (
+      <>
+        <p>
+          You can try Bookingjini free for 7 days. Our team sets up your account
+          and connects your channels, so you can experience real results with
+          your own property rather than a demo.
+        </p>
+        <p>
+          No credit card is needed. When the trial ends, you can choose a plan
+          or walk away. There's no lock-in and no automatic charge.
+        </p>
+      </>
+    ),
   },
 ];
 

@@ -122,9 +122,9 @@ export function CaseStudies() {
                 From ₹40 lakh to ₹2.4 crore in website bookings.
               </h3>
               <p className="relative mt-4 max-w-md text-sm leading-relaxed text-white/70">
-                <Placeholder>[Hotel name, city, rooms]</Placeholder> grew direct
-                revenue 6x in <Placeholder>[time period]</Placeholder> by using
-                the Bookingjini booking engine, website and CRM together.
+                <Placeholder>A mid-sized hotel</Placeholder> grew its direct
+                revenue 6x by using the Bookingjini booking engine, website and
+                CRM together.
               </p>
 
               <div className="relative mt-auto">

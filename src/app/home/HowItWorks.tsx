@@ -37,7 +37,7 @@ export function HowItWorks() {
           badge="How it works"
           font="sans"
           icon={<FaBolt className="h-3.5 w-3.5 text-primary" />}
-          title="Live in [X] days. We do the heavy lifting."
+          title="Live in 1 days. We do the heavy lifting."
         />
 
         <ol className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">

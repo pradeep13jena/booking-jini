@@ -129,7 +129,7 @@ export function OurStory() {
             <RiDoubleQuotesL aria-hidden className="h-8 w-8 shrink-0 text-primary" />
             {/* TODO: replace with the founder's quote */}
             <p className="font-heading text-2xl font-medium text-[#1E0D01] md:text-3xl">
-              [Short founder quote on why Bookingjini exists]
+              We built Bookingjini with a simple belief: hotels should focus on hospitality, not the complexities of technology. Our purpose is to empower every hotelier with the tools, independence, and intelligence to grow on their own terms.
             </p>
           </blockquote>
           <p className="shrink-0 text-sm text-[#1E0D01]/60">Sibasish Mishra, Founder &amp; CEO</p>

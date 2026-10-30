@@ -6,7 +6,7 @@ import { motion, useReducedMotion } from "framer-motion";
 const STATS = [
   { value: "9,300+", label: "hotels" },
   { value: "2.8 lakh", label: "rooms managed" },
-  { value: "10", label: "State Tourism Boards" },
+  { value: "6+", label: "Countries" },
   { value: "₹10 Cr+", label: "Processed Daily" },
 ];
 

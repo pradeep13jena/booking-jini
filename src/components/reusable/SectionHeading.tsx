@@ -7,7 +7,7 @@ import { Reveal } from "./Reveal";
 // Badge pill + h2 + optional description, shared by home sections
 export function SectionHeading({
   badge,
-  icon = <FaRegSmile className="h-3.5 w-3.5 text-primary" />,
+  // icon = <FaRegSmile className="h-3.5 w-3.5 text-primary" />,
   title,
   description,
   align = "center",
@@ -34,7 +34,7 @@ export function SectionHeading({
     >
       {badge && (
         <span className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-black/10 bg-white/60 px-3 py-1 text-xs font-medium text-[#1E0D01]">
-          {icon}
+          {/* {icon} */}
           {badge}
         </span>
       )}
