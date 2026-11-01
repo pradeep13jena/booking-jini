@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { AnimatedButton } from "@/components/AnimatedButton";
 import { Reveal } from "@/components/reusable/Reveal";
-import { DUMMY } from "./dummy-images";
+import { aboutHero } from "@/lib/image";
 
 export function AboutHero() {
   return (
@@ -44,28 +44,19 @@ export function AboutHero() {
           </Reveal>
         </div>
 
-        <div className="mt-10 grid w-full grid-cols-1 gap-3 md:mt-12 md:grid-cols-[3fr_2fr]">
-          <Reveal index={2} className="group relative aspect-3/2 overflow-hidden rounded-2xl">
-            <Image
-              src={DUMMY.heroTeam}
-              alt="The Bookingjini team at the Bhubaneswar office"
-              fill
-              priority
-              sizes="(min-width: 768px) 700px, 100vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-            />
-          </Reveal>
-          <Reveal index={3} className="group relative aspect-3/2 overflow-hidden rounded-2xl md:aspect-auto">
-            <Image
-              src={DUMMY.heroWork}
-              alt="A Bookingjini team member at work"
-              fill
-              priority
-              sizes="(min-width: 768px) 460px, 100vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-            />
-          </Reveal>
-        </div>
+        <Reveal
+          index={2}
+          className="group relative mt-10 aspect-3/2 w-full overflow-hidden rounded-2xl md:mt-12 md:aspect-12/5"
+        >
+          <Image
+            src={aboutHero}
+            alt="The Bookingjini team at the Bhubaneswar office"
+            fill
+            priority
+            sizes="(min-width: 768px) 1200px, 100vw"
+            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+          />
+        </Reveal>
       </div>
     </section>
   );

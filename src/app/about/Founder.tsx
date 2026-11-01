@@ -1,10 +1,12 @@
 "use client";
 
 import type { ReactNode } from "react";
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { RiDoubleQuotesL } from "react-icons/ri";
 
 import { Reveal } from "@/components/reusable/Reveal";
+import { founderPhoto } from "@/lib/image";
 
 const B = ({ children }: { children: ReactNode }) => (
   <strong className="font-semibold text-[#1E0D01]">{children}</strong>
@@ -53,8 +55,14 @@ export function Founder() {
   return (
     <section className="w-full">
       <div className="container grid grid-cols-1 gap-3 px-6 py-16 md:grid-cols-[1fr_1.4fr] md:py-20">
-        {/* TODO: swap the gradient for the founder's portrait (next/image, fill + object-cover) */}
-        <Reveal className="relative min-h-96 overflow-hidden rounded-3xl bg-linear-to-b from-[#ECE9E4] via-[#DCD8D2] to-[#8E8881]">
+        <Reveal className="relative min-h-96 overflow-hidden rounded-3xl bg-[#DCD8D2]">
+          <Image
+            src={founderPhoto}
+            alt="Sibasish Mishra, Founder & CEO of Bookingjini"
+            fill
+            sizes="(min-width: 768px) 480px, 100vw"
+            className="object-cover object-top"
+          />
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between rounded-2xl bg-white p-4">
             <div>
               <p className="font-heading text-lg font-medium text-[#1E0D01]">Sibasish Mishra</p>

@@ -52,6 +52,11 @@ import w from "../../public/company-marque/w.png"; // TODO: unknown hotel — "W
 // reusable
 import CTAimage from "../../public/reusable/CTAimage.png"
 
+// About page
+import aboutHero from "../../public/about/About/top1.png";
+import founderPhoto from "../../public/about/About/founderPhoto.jpeg";
+import swostiMishra from "../../public/about/About/swosti mishra.webp";
+
 export {
   // company Logo
   Orangelogo,
@@ -106,5 +111,10 @@ export {
 
   // reusable
 
-  CTAimage
+  CTAimage,
+
+  // About page
+  aboutHero,
+  founderPhoto,
+  swostiMishra,
 };

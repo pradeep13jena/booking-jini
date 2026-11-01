@@ -2,15 +2,17 @@ import Image from "next/image";
 import { LuSmile } from "react-icons/lu";
 
 import { Reveal } from "@/components/reusable/Reveal";
+import { founderPhoto, swostiMishra } from "@/lib/image";
 import { SplitHeading } from "./Headings";
 import { DUMMY } from "./dummy-images";
 
+// TODO: swap the remaining DUMMY photos for real portraits in /public/about/About
 const LEADERS = [
-  { name: "Gourab Nandy", role: "Sales Vice President" },
-  { name: "Anshul Chauhan", role: "Evangelist" },
-  { name: "Namrata Swain", role: "AVP - Operations" },
-  { name: "Manoj Pandia", role: "Chief Architect" },
-  { name: "Pallab Goswami", role: "Vice President" },
+  { name: "Sibasish Mishra", role: "Founder & CEO", photo: founderPhoto },
+  { name: "Swosti Mishra", role: "Director", photo: swostiMishra },
+  { name: "Namrata Swain", role: "AVP - Operations", photo: DUMMY.leadership[2] },
+  { name: "Manoj Pandia", role: "Chief Architect", photo: DUMMY.leadership[3] },
+  { name: "Pallab Goswami", role: "Vice President", photo: DUMMY.leadership[4] },
 ];
 
 export function Leadership() {
@@ -33,11 +35,11 @@ export function Leadership() {
               className="group relative aspect-4/5 overflow-hidden rounded-md transition-transform duration-300 hover:-translate-y-1"
             >
               <Image
-                src={DUMMY.leadership[i]}
+                src={leader.photo}
                 alt={leader.name}
                 fill
                 sizes="(min-width: 1024px) 230px, (min-width: 640px) 33vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
               />
               {/* Navy fade so the caption stays readable on any photo */}
               <div className="absolute inset-0 bg-linear-to-t from-[#1a1d2b]/90 via-[#1a1d2b]/25 to-transparent" />

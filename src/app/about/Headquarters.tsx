@@ -22,7 +22,7 @@ export function Headquarters() {
           </div>
           <div className="text-sm md:pb-4">
             {/* TODO: add the full office address */}
-            <p className="font-medium text-[#1E0D01]">[Full office address]</p>
+            {/* <p className="font-medium text-[#1E0D01]">[Full office address]</p> */}
             <p className="mt-1 text-[#1E0D01]/60">Built in Odisha, serving hotels in 120+ Indian cities.</p>
           </div>
         </Reveal>
