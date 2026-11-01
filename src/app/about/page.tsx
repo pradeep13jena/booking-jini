@@ -9,7 +9,7 @@ import { Mission } from './Mission';
 import { Values } from './Values';
 import { GovernmentTrust } from './GovernmentTrust';
 import { Founder } from './Founder';
-import { Leadership } from './Leadership';
+import { Leadership, LEADERS, TOP_LEADERS } from './Leadership';
 import { Investors } from './Investors';
 import { Headquarters } from './Headquarters';
 import { CareersPress } from './CareersPress';
@@ -38,9 +38,11 @@ export default function AboutPage() {
       <SectionDivider />
       <Founder />
       <SectionDivider />
-      <Leadership />
+      <Leadership leaders={TOP_LEADERS} />
       <SectionDivider />
       <Investors />
+      <SectionDivider />
+      <Leadership leaders={LEADERS} />
       <SectionDivider />
       <Headquarters />
       <SectionDivider />

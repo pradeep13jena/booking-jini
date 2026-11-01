@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { LuSmile } from "react-icons/lu";
 
 import { Reveal } from "@/components/reusable/Reveal";
@@ -6,8 +6,12 @@ import { founderPhoto, swostiMishra } from "@/lib/image";
 import { SplitHeading } from "./Headings";
 import { DUMMY } from "./dummy-images";
 
-// TODO: swap the remaining DUMMY photos for real portraits in /public/about/About
-const LEADERS = [
+type Leader = { name: string; role: string; photo: string | StaticImageData };
+
+// TODO: swap the remaining DUMMY photos for real portraits via @/lib/image
+
+// Shown right below the Founder section
+export const TOP_LEADERS: Leader[] = [
   { name: "Sibasish Mishra", role: "Founder & CEO", photo: founderPhoto },
   { name: "Swosti Mishra", role: "Director", photo: swostiMishra },
   { name: "Namrata Swain", role: "AVP - Operations", photo: DUMMY.leadership[2] },
@@ -15,7 +19,16 @@ const LEADERS = [
   { name: "Pallab Goswami", role: "Vice President", photo: DUMMY.leadership[4] },
 ];
 
-export function Leadership() {
+// Shown right below the Investors section
+export const LEADERS: Leader[] = [
+  { name: "Gourab Nandy", role: "Sales Vice President", photo: DUMMY.leadership[0] },
+  { name: "Anshul Chauhan", role: "Evangelist", photo: DUMMY.leadership[1] },
+  { name: "Namrata Swain", role: "AVP - Operations", photo: DUMMY.leadership[2] },
+  { name: "Manoj Pandia", role: "Chief Architect", photo: DUMMY.leadership[3] },
+  { name: "Pallab Goswami", role: "Vice President", photo: DUMMY.leadership[4] },
+];
+
+export function Leadership({ leaders }: { leaders: Leader[] }) {
   return (
     <section className="w-full">
       <div className="container px-6 py-16 md:py-20">
@@ -27,7 +40,7 @@ export function Leadership() {
         />
 
         <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {LEADERS.map((leader, i) => (
+          {leaders.map((leader, i) => (
             <Reveal
               as="li"
               key={leader.name}
