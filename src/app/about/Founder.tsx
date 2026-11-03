@@ -14,19 +14,22 @@ const B = ({ children }: { children: ReactNode }) => (
 
 const POINTS: ReactNode[] = [
   <>
-    <B>Sibasish Mishra</B> founded Bookingjini in Bhubaneswar in 2017 and has led it as CEO since. Before Bookingjini he
-    worked in banking and built earlier ventures as a serial entrepreneur.
+    <B>Sibasish Mishra</B> founded Bookingjini in Bhubaneswar in 2017 and has
+    led it as CEO since. Before Bookingjini he worked in banking and built
+    earlier ventures as a serial entrepreneur.
   </>,
   <>
-    He saw the problem first-hand as a traveller: hotels handing 30 to 35% of their room rate to booking agencies. He
-    set out to give independent Indian hotels the same direct-booking technology the big chains have, at a price a
+    He saw the problem first-hand as a traveller: hotels handing 30 to 35% of
+    their room rate to booking agencies. He set out to give independent Indian
+    hotels the same direct-booking technology the big chains have, at a price a
     10-room property can afford.
   </>,
   <>
-    Under his leadership Bookingjini has grown from 20 hotels to 9,300+, and earned the trust of 10 state tourism
-    boards.{" "}
-    {/* TODO: replace placeholder with confirmed bio details */}
-    <mark className="rounded bg-[#FDE6D6] px-1 text-primary">[Add education, earlier companies and any awards]</mark>
+    Under his leadership, Bookingjini has grown from 20 hotels to 9,300+ and
+    earned the trust of 10 state tourism boards. He studied finance at Utkal
+    University and marketing at XIM Bhubaneswar, and completed a leadership
+    programme at IIM Ahmedabad. He was named a CNBC-TV18 Young Turk and one of
+    The New Indian Express’s EdEx 40 Under 40 in 2018.
   </>,
 ];
 
@@ -65,33 +68,43 @@ export function Founder() {
           />
           <div className="absolute inset-x-3 bottom-3 flex items-end justify-between rounded-2xl bg-white p-4">
             <div>
-              <p className="font-heading text-lg font-medium text-[#1E0D01]">Sibasish Mishra</p>
+              <p className="font-heading text-lg font-medium text-[#1E0D01]">
+                Sibasish Mishra
+              </p>
               <p className="text-xs text-primary">Founder &amp; CEO</p>
             </div>
-            <p className="text-[11px] tracking-widest text-[#1E0D01]/50">EST. 2017</p>
+            <p className="text-[11px] tracking-widest text-[#1E0D01]/50">
+              EST. 2017
+            </p>
           </div>
         </Reveal>
 
         <Reveal index={1} className="rounded-3xl bg-white p-6 md:p-10">
           <h2 className="font-heading text-3xl leading-tight font-medium tracking-tight text-[#1E0D01] md:text-4xl">
-            A banker who saw hotels losing <span className="text-primary">a third</span> of every booking, and built the
-            fix.
+            A banker who saw hotels losing{" "}
+            <span className="text-primary">a third</span> of every booking, and
+            built the fix.
           </h2>
           <ul className="mt-8">
             {POINTS.map((point, i) => (
               <li key={i} className="relative pb-6 pl-7 last:pb-0">
                 {/* Connector between dots */}
                 {i < POINTS.length - 1 && (
-                  <span aria-hidden className="absolute top-5 bottom-1 left-[4.5px] w-px bg-primary/20" />
+                  <span
+                    aria-hidden
+                    className="absolute top-5 bottom-1 left-[4.5px] w-px bg-primary/20"
+                  />
                 )}
                 <ScrollDot />
-                <p className="text-sm leading-relaxed text-[#1E0D01]/60">{point}</p>
+                <p className="text-sm leading-relaxed text-[#1E0D01]/60">
+                  {point}
+                </p>
               </li>
             ))}
           </ul>
         </Reveal>
 
-        <Reveal className="relative grid grid-cols-1 items-center gap-8 overflow-hidden rounded-3xl bg-[#1E0D01] p-6 md:col-span-2 md:grid-cols-2 md:p-10">
+        <Reveal className="relative grid grid-cols-1 items-center gap-8 overflow-hidden rounded-3xl bg-[#1E0D01] p-6 md:col-span-2 md:grid-cols-[3fr_2fr] md:gap-16 md:p-10">
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_15%_15%,rgba(249,117,24,0.4),transparent_45%)]"
@@ -99,8 +112,15 @@ export function Founder() {
           <blockquote className="relative">
             <RiDoubleQuotesL aria-hidden className="h-8 w-8 text-primary" />
             {/* TODO: replace with the founder's quote */}
-            <p className="mt-4 font-heading text-2xl font-medium text-white md:text-3xl">[Founder quote in his own words]</p>
-            <footer className="mt-4 text-sm text-white/50">Sibasish Mishra</footer>
+            <p className="mt-4 font-heading text-2xl font-medium text-white md:text-3xl">
+              I have always believed that success is not measured by how far we
+              go, but by how many people grow because we dared to begin. For me,
+              building something meaningful has always mattered more than
+              building something big.
+            </p>
+            <footer className="mt-4 text-sm text-white/50">
+              Sibasish Mishra
+            </footer>
           </blockquote>
 
           <dl className="relative">

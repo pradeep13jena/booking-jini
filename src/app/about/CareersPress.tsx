@@ -1,15 +1,17 @@
-import Link from "next/link";
-import { LuArrowDown, LuArrowRight } from "react-icons/lu";
+// Press card is commented out below; restore LuArrowDown + PRESS_KIT_URL with it
+import { LuArrowRight } from "react-icons/lu";
 
 import { Reveal } from "@/components/reusable/Reveal";
 
+const CAREERS_EMAIL = "careers@bookingjini.com";
+
 // TODO: point at the real press kit file and add the press email
-const PRESS_KIT_URL = "#";
+// const PRESS_KIT_URL = "#";
 
 export function CareersPress() {
   return (
     <section className="w-full">
-      <div className="container grid grid-cols-1 gap-4 px-6 py-16 md:grid-cols-[1.6fr_1fr] md:py-20">
+      <div className="container grid grid-cols-1 gap-4 px-6 py-16 md:py-20">
         <Reveal className="rounded-3xl border border-black/5 bg-white p-8 md:p-10">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium text-primary">Careers</span>
@@ -24,15 +26,17 @@ export function CareersPress() {
           <p className="max-w-sm text-base leading-relaxed text-[#1E0D01]/60">
             We hire people who care about hoteliers and like solving hard problems in a growing company.
           </p>
-          <Link
-            href="/careers"
+          {/* Opens the visitor's mail app; plain <a> since mailto isn't a Next route */}
+          <a
+            href={`mailto:${CAREERS_EMAIL}`}
             className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#1E0D01] px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-primary"
           >
-            See open roles
+            Write to {CAREERS_EMAIL}
             <LuArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          </a>
         </Reveal>
 
+        {/* Press card hidden for now
         <Reveal index={1} className="flex flex-col rounded-3xl bg-[#FDE6D6] p-8">
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium text-primary">Press &amp; media</span>
@@ -58,6 +62,7 @@ export function CareersPress() {
             <p className="text-sm font-semibold text-primary">[press email]</p>
           </div>
         </Reveal>
+        */}
       </div>
     </section>
   );

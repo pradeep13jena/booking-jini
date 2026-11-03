@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image, { type StaticImageData } from "next/image";
 import { LuSmile } from "react-icons/lu";
 
@@ -28,16 +29,22 @@ export const LEADERS: Leader[] = [
   { name: "Pallab Goswami", role: "Vice President", photo: DUMMY.leadership[4] },
 ];
 
-export function Leadership({ leaders }: { leaders: Leader[] }) {
+// Same card grid for both lists; each usage passes its own heading text
+export function Leadership({
+  leaders,
+  badge,
+  title,
+  description,
+}: {
+  leaders: Leader[];
+  badge: string;
+  title: ReactNode;
+  description: string;
+}) {
   return (
     <section className="w-full">
       <div className="container px-6 py-16 md:py-20">
-        <SplitHeading
-          icon={LuSmile}
-          badge="Key leadership"
-          title="The team running Bookingjini every day"
-          description="The people leading sales, operations, technology and customer growth for 9,300+ hotels."
-        />
+        <SplitHeading icon={LuSmile} badge={badge} title={title} description={description} />
 
         <ul className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {leaders.map((leader, i) => (
