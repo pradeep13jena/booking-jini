@@ -68,6 +68,15 @@ import anshulChauhan from "../../public/about/Anshul Chauhan.png";
 import namrataSwain from "../../public/about/Namrata Swain.png";
 import pallabGoswami from "../../public/about/Pallab Goswami.jpeg";
 
+// About page - investor logos
+import mumbaiAngels from "../../public/about/Mumbai Angels.jpeg";
+import neotechub from "../../public/about/Neotechub.jpeg";
+import letsVenture from "../../public/about/LetsVenture.jpeg";
+import inflectionPoint from "../../public/about/Inflection Point Ventures.jpeg";
+import tieIndiaAngels from "../../public/about/TiE India Angels.jpeg";
+import vc888 from "../../public/about/888vc.jpeg";
+import difcDubai from "../../public/about/DIFC Dubai.jpeg";
+
 export {
   // company Logo
   Orangelogo,
@@ -139,4 +148,13 @@ export {
   anshulChauhan,
   namrataSwain,
   pallabGoswami,
+
+  // About page - investor logos
+  mumbaiAngels,
+  neotechub,
+  letsVenture,
+  inflectionPoint,
+  tieIndiaAngels,
+  vc888,
+  difcDubai,
 };

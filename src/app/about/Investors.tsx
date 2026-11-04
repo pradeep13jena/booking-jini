@@ -1,19 +1,27 @@
+import Image, { type StaticImageData } from "next/image";
 import { LuArrowUpRight, LuSmile } from "react-icons/lu";
 
-import { cn } from "@/lib/utils";
 import { Reveal } from "@/components/reusable/Reveal";
+import {
+  difcDubai,
+  inflectionPoint,
+  letsVenture,
+  mumbaiAngels,
+  neotechub,
+  tieIndiaAngels,
+  vc888,
+} from "@/lib/image";
 import { SplitHeading } from "./Headings";
 
-// TEMP: styled wordmarks stand in for logos — swap `logo` for next/image once the assets are added.
 // TODO: add `href` for Neotechub, TiE India Angels and 888vc once confirmed.
-const INVESTORS: { name: string; logo: string; logoClass: string; href?: string }[] = [
-  { name: "Mumbai Angels", logo: "Mumbai Angels Network", logoClass: "italic text-[#1E0D01]", href: "https://www.mumbaiangels.com" },
-  { name: "Neotechub", logo: "NEOTEC HUB", logoClass: "tracking-wide text-[#E89A2C]" },
-  { name: "LetsVenture", logo: "LetsVenture", logoClass: "text-[#1F3C88]", href: "https://www.letsventure.com" },
-  { name: "Inflection Point Ventures", logo: "INFLECTION", logoClass: "tracking-wider text-[#1F3C88]", href: "https://www.ipventures.in" },
-  { name: "TiE India Angels", logo: "TiE India Angels", logoClass: "text-[#C8102E]" },
-  { name: "888vc", logo: "888vc", logoClass: "text-[#E8461E]" },
-  { name: "DIFC Dubai", logo: "DIFC", logoClass: "tracking-widest text-[#1E0D01]", href: "https://www.difc.ae" },
+const INVESTORS: { name: string; logo: StaticImageData; href?: string }[] = [
+  { name: "Mumbai Angels", logo: mumbaiAngels, href: "https://www.mumbaiangels.com" },
+  { name: "Neotechub", logo: neotechub },
+  { name: "LetsVenture", logo: letsVenture, href: "https://www.letsventure.com" },
+  { name: "Inflection Point Ventures", logo: inflectionPoint, href: "https://www.ipventures.in" },
+  { name: "TiE India Angels", logo: tieIndiaAngels },
+  { name: "888vc", logo: vc888 },
+  { name: "DIFC Dubai", logo: difcDubai, href: "https://www.difc.ae" },
 ];
 
 export function Investors() {
@@ -43,13 +51,17 @@ export function Investors() {
                       <LuArrowUpRight className="h-3.5 w-3.5" />
                     </span>
                   </div>
-                  <span
-                    className={cn(
-                      "flex flex-1 items-center justify-center py-6 text-center font-heading text-xl font-bold md:text-2xl",
-                      investor.logoClass
-                    )}
-                  >
-                    {investor.logo}
+                  {/* Fixed-height box; object-contain fits wide and square logos alike */}
+                  <span className="flex flex-1 items-center justify-center py-6">
+                    <span className="relative h-14 w-full max-w-44 md:h-16">
+                      <Image
+                        src={investor.logo}
+                        alt={`${investor.name} logo`}
+                        fill
+                        sizes="176px"
+                        className="object-contain"
+                      />
+                    </span>
                   </span>
                   <span className="flex items-center gap-2 text-sm text-[#1E0D01]/60 transition-colors duration-300 group-hover:text-[#1E0D01]">
                     {/* Orange dash slides in on hover */}

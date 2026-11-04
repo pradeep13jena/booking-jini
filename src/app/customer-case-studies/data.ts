@@ -69,7 +69,7 @@ export const INDEPENDENT_HOTELS: IndependentHotel[] = [
   { id: "travancore-court", name: "Travancore Court", logo: travancoreCourt },
   { id: "red-maple", name: "The Red Maple Hill Hotel", logo: redMaple, mono: true },
   { id: "lohmod", name: "The Lohmod", logo: lohmod },
-  { id: "lee-garden", name: "Hotel Lee Garden", logo: leeGarden },
+  { id: "lee-garden-1", name: "Hotel Lee Garden", logo: leeGarden },
   { id: "lineage", name: "Lineage", logo: lineage },
   { id: "grand-radiant", name: "The Grand Radiant", logo: grandRadiant, mono: true },
   { id: "grand-continental", name: "Grand Continental", logo: grandContinental },
