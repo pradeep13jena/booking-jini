@@ -3,30 +3,39 @@ import Image, { type StaticImageData } from "next/image";
 import { LuSmile } from "react-icons/lu";
 
 import { Reveal } from "@/components/reusable/Reveal";
-import { founderPhoto, swostiMishra } from "@/lib/image";
+import {
+  anshulChauhan,
+  gourabNandy,
+  harishSharma,
+  himanshuGoel,
+  manojPandia,
+  manojPandiaTeam,
+  namrataSwain,
+  pallabGoswami,
+  sibasishMishra,
+  swostiMishra,
+} from "@/lib/image";
 import { SplitHeading } from "./Headings";
-import { DUMMY } from "./dummy-images";
 
 type Leader = { name: string; role: string; photo: string | StaticImageData };
 
-// TODO: swap the remaining DUMMY photos for real portraits via @/lib/image
-
-// Shown right below the Founder section
+// Board of directors, shown right below the Founder section
 export const TOP_LEADERS: Leader[] = [
-  { name: "Sibasish Mishra", role: "Founder & CEO", photo: founderPhoto },
+  { name: "Sibasish Mishra", role: "Founder & CEO", photo: sibasishMishra },
   { name: "Swosti Mishra", role: "Director", photo: swostiMishra },
-  { name: "Namrata Swain", role: "AVP - Operations", photo: DUMMY.leadership[2] },
-  { name: "Manoj Pandia", role: "Chief Architect", photo: DUMMY.leadership[3] },
-  { name: "Pallab Goswami", role: "Vice President", photo: DUMMY.leadership[4] },
+  { name: "Manoj Pandia", role: "Director of Technology", photo: manojPandia },
+  { name: "Himanshu Goel", role: "Board Member", photo: himanshuGoel },
+  // TODO: confirm Harish Sharma's title (design still shows a placeholder)
+  { name: "Harish Sharma", role: "Board Member", photo: harishSharma },
 ];
 
-// Shown right below the Investors section
+// Key leadership, shown right below the Investors section
 export const LEADERS: Leader[] = [
-  { name: "Gourab Nandy", role: "Sales Vice President", photo: DUMMY.leadership[0] },
-  { name: "Anshul Chauhan", role: "Evangelist", photo: DUMMY.leadership[1] },
-  { name: "Namrata Swain", role: "AVP - Operations", photo: DUMMY.leadership[2] },
-  { name: "Manoj Pandia", role: "Chief Architect", photo: DUMMY.leadership[3] },
-  { name: "Pallab Goswami", role: "Vice President", photo: DUMMY.leadership[4] },
+  { name: "Gourab Nandy", role: "Sales Vice President", photo: gourabNandy },
+  { name: "Anshul Chauhan", role: "Evangelist", photo: anshulChauhan },
+  { name: "Namrata Swain", role: "AVP - Operations", photo: namrataSwain },
+  { name: "Manoj Pandia", role: "Chief Architect", photo: manojPandiaTeam },
+  { name: "Pallab Goswami", role: "Vice President", photo: pallabGoswami },
 ];
 
 // Same card grid for both lists; each usage passes its own heading text

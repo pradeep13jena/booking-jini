@@ -53,9 +53,20 @@ import w from "../../public/company-marque/w.png"; // TODO: unknown hotel — "W
 import CTAimage from "../../public/reusable/CTAimage.png"
 
 // About page
-import aboutHero from "../../public/about/About/top1.png";
-import founderPhoto from "../../public/about/About/founderPhoto.jpeg";
-import swostiMishra from "../../public/about/About/swosti mishra.webp";
+import aboutHero from "../../public/about/top1.png";
+import founderPhoto from "../../public/about/founderPhoto.jpeg";
+
+// About page - leadership portraits
+import sibasishMishra from "../../public/about/SIbasish Mishra.png";
+import swostiMishra from "../../public/about/Swosti Mishra.png";
+import manojPandia from "../../public/about/Manoj Pandia.png";
+import manojPandiaTeam from "../../public/about/Manoj Pandia - Team .png"; // second shot, used in the team grid
+import himanshuGoel from "../../public/about/Himanshu Goel.png";
+import harishSharma from "../../public/about/Harish Sharma.png";
+import gourabNandy from "../../public/about/Gourab Nandy.png";
+import anshulChauhan from "../../public/about/Anshul Chauhan.png";
+import namrataSwain from "../../public/about/Namrata Swain.png";
+import pallabGoswami from "../../public/about/Pallab Goswami.jpeg";
 
 export {
   // company Logo
@@ -116,5 +127,16 @@ export {
   // About page
   aboutHero,
   founderPhoto,
+
+  // About page - leadership portraits
+  sibasishMishra,
   swostiMishra,
+  manojPandia,
+  manojPandiaTeam,
+  himanshuGoel,
+  harishSharma,
+  gourabNandy,
+  anshulChauhan,
+  namrataSwain,
+  pallabGoswami,
 };
